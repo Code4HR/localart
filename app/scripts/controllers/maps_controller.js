@@ -83,14 +83,15 @@ Norfolkart.MapController = Ember.ObjectController.extend({
       *     error. */
     positionError: function (error) {
         'use strict';
+        var messages = [
+            'Permission denied.',
+            'Position unavailable.',
+            'Timeout.'
+        ];
         alert(
-            error.code === 1 ?
-                    'Permission denied.' :
-                    error.code === 2 ?
-                            'Position unavailable.' :
-                            error.code === 3 ?
-                                    'Timeout.' :
-                                    'Unknown error.'
+            messages.indexOf(error.code - 1) > -1 ?
+                    messages[error.code - 1] :
+                    'Unknown error.'
         );
     },
 
@@ -102,4 +103,5 @@ Norfolkart.MapController = Ember.ObjectController.extend({
       * @default true */
     hasMaps: true
 });
+
 
