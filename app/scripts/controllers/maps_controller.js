@@ -26,7 +26,10 @@ Norfolkart.MapController = Ember.ObjectController.extend({
     },
     findMe: function () {
         'use strict';
-        window.navigator.geolocation.getCurrentPosition(this.centerMap, this.positionError);
+        window.navigator.geolocation.getCurrentPosition(
+            this.centerMap,
+            this.positionError
+        );
     },
     centerMap: function (position) {
         'use strict';
