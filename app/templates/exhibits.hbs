@@ -1,0 +1,10 @@
+{{#each model}}
+    {{#link-to 'exhibit' this}}
+	<button class="record">
+	    <img {{bind-attr src="this.imageurl"}} />
+	    <p>{{this.title}}</p>
+	    <img src="/images/right-arrow.png" style="float: right" />
+	</button>
+    {{/link-to}}
+{{/each}}
+

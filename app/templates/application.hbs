@@ -1,0 +1,21 @@
+<div class="navbar">
+    {{#link-to 'exhibits' }}
+	<button>
+	    List
+	</button>
+    {{/link-to}}
+
+    {{#link-to 'map'}}
+	<button>
+	    Map
+	</button>
+    {{/link-to}}
+
+    iArtNorfolk
+
+    <button {{action 'findMe'}} style="float: right">
+	Find Me
+    </button>
+</div>
+
+{{outlet}}

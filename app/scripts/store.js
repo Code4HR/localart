@@ -1,0 +1,1 @@
+Norfolkart.ApplicationAdapter = DS.FixtureAdapter;
