@@ -6,7 +6,7 @@ An HTML5 mobile app for navigating &amp; browsing locations of public art, archi
 Prerequisites
 =============
 
-    npm install -g bower grunt-cli
+    npm install -g yo
     
 Installation
 ============
