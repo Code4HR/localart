@@ -23,6 +23,21 @@
   * @constructor */
 Norfolkart.MapController = Ember.ObjectController.extend({
     // Implement your controller here.
+
+    /** Represents the centre latitude.
+      *
+      * @property latitude
+      * @type Number
+      * @default 36.84765224454971 */
+    latitude: 36.84765224454971,
+
+    /** Represents the centre longitude.
+      *
+      * @property longitude
+      * @type Number
+      * @default -76.2922677397728 */
+    longitude: -76.2922677397728,
+
     actions: {
         /** Computation, public access to the geolocation function. 
           *
@@ -85,21 +100,6 @@ Norfolkart.MapController = Ember.ObjectController.extend({
       * @property hasMaps
       * @type Boolean
       * @default true */
-    hasMaps: true,
-
-    /** Represents the centre latitude.
-      *
-      * @property latitude
-      * @type Number
-      * @default 36.84765224454971 */
-    latitude: 36.84765224454971,
-
-    /** Represents the centre longitude.
-      *
-      * @property longitude
-      * @type Number
-      * @default -76.2922677397728 */
-    longitude: -76.2922677397728
+    hasMaps: true
 });
-
 
