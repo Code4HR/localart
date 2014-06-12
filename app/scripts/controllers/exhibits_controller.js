@@ -16,7 +16,11 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/** The model for the exhibits controller.
+  *
+  * @class ExhibitsController
+  * @constructor */
 Norfolkart.ExhibitsController = Ember.ObjectController.extend({
   // Implement your controller here.
 });
-
