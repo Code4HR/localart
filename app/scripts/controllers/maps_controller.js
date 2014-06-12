@@ -16,26 +16,92 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/** The model for the map controller.
+  *
+  * @class MapController
+  * @constructor */
 Norfolkart.MapController = Ember.ObjectController.extend({
+    // Implement your controller here.
+
+    /** Represents the centre latitude.
+      *
+      * @property latitude
+      * @type Number
+      * @default 36.84765224454971 */
+    latitude: 36.84765224454971,
+
+    /** Represents the centre longitude.
+      *
+      * @property longitude
+      * @type Number
+      * @default -76.2922677397728 */
+    longitude: -76.2922677397728,
+
     actions: {
-	findMe: function () {
-	    this.findMe();
-	}
-    }, findMe: function () {
-	window.navigator.geolocation.getCurrentPosition(this.centerMap, this.positionError);
-    }, centerMap: function (position) {
-	alert(position.coords.latitude);
-	alert(position.coords.longitude);
-	this.latitude = position.coords.latitude;
-	this.longitude = position.coords.longitude;
-    }, positionError: function (error) {
-	alert(
-	    error.code === 1 ? 'Permission denied.' :
-	    error.code === 2 ? 'Position unavailable.' :
-	    error.code === 3 ? 'Timeout.' : 'Unknown error.');
-    }, hasMaps: true
-    , latitude: 36.84765224454971
-    , longitude: -76.2922677397728
-  // Implement your controller here.
+        /** Computation, public access to the geolocation function. 
+          *
+          * @public
+          * @method findMe */
+        findMe: function () {
+            'use strict';
+            this.findMe();
+        }
+    },
+
+    /** Computation, gets the current geolocation position of the user. 
+      *
+      * @method findMe */
+    findMe: function () {
+        'use strict';
+        window.navigator.geolocation.getCurrentPosition(
+            this.centerMap,
+            this.positionError
+        );
+    },
+
+    /** Computation, centres the map on the given geolocation position.
+      *
+      * @method centerMap
+      *
+      * @param {Position} position A Position value to centre the map upon. */
+    centerMap: function (position) {
+        'use strict';
+
+        // Currently, just shows the coordinates.
+        alert(position.coords.latitude);
+        alert(position.coords.longitude);
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+    },
+
+    /** Computation, alerts the user that a geolocation error occurred.
+      *
+      * @method positionError
+      *
+      * @param {PositionError} error A PositionError value representing the 
+      *     error. */
+    positionError: function (error) {
+        'use strict';
+        var messages = [
+            'Permission denied.',
+            'Position unavailable.',
+            'Timeout.'
+        ];
+        alert(
+            messages.indexOf(error.code - 1) > -1 ?
+                    messages[error.code - 1] :
+                    'Unknown error.'
+        );
+    },
+
+    /** Predicate constant, proves this controller has maps.
+      *
+      * @deprecated
+      * @property hasMaps
+      * @type Boolean
+      * @default true */
+    hasMaps: true
 });
+
 
