@@ -16,13 +16,36 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/** The model for the application controller.
+  *
+  * @class ApplicationController
+  * @constructor */
 Norfolkart.ApplicationController = Ember.ArrayController.extend({
-      needs: 'map'
-    , map: Ember.computed.alias('controllers.map')
-    , actions: {
-	findMe: function () {
-	    var map = this.get('map');
-	    map.findMe();
-	}
+    /** Represents the dependencies for this controller.
+      *
+      * @property needs
+      * @readOnly
+      * @type String
+      * @default 'map' */
+    needs: 'map',
+
+    /** Represents the map controller.
+      *
+      * @property map
+      * @readOnly
+      * @type Ember.ComputedProperty */
+    map: Ember.computed.alias('controllers.map'),
+
+    actions: {
+        /** Computation, centres the map on the user's current location.
+          *
+          * @method findMe */
+        findMe: function () {
+            'use strict';
+            var map = this.get('map');
+            map.findMe();
+        }
     }
 });
+

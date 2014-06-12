@@ -21,7 +21,7 @@
   *
   * @class MapController
   * @constructor */
-Norfolkart.MapController = Ember.ObjectController.extend({
+Norfolkart.MapController = Ember.ArrayController.extend({
     // Implement your controller here.
 
     /** Represents the centre latitude.
