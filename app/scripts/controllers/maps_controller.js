@@ -93,15 +93,7 @@ Norfolkart.MapController = Ember.ArrayController.extend({
                     messages[error.code - 1] :
                     'Unknown error.'
         );
-    },
-
-    /** Predicate constant, proves this controller has maps.
-      *
-      * @deprecated
-      * @property hasMaps
-      * @type Boolean
-      * @default true */
-    hasMaps: true
+    }
 });
 
 
