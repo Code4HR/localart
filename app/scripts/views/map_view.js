@@ -31,7 +31,7 @@ Norfolkart.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
 
 Norfolkart.MapView = EmberLeaflet.MapView.extend({
       classNames: ['map']
-    , center: L.latLng(36.84765224454971, -76.2922677397728)
+    , centerBinding: 'controller.centre'
     , zoom: 16
     , childLayers: [
 	  Norfolkart.TileLayer
