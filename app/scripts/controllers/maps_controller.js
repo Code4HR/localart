@@ -24,19 +24,12 @@
 Norfolkart.MapController = Ember.ArrayController.extend({
     // Implement your controller here.
 
-    /** Represents the centre latitude.
+    /** Represents the map centre.
       *
-      * @property latitude
-      * @type Number
-      * @default 36.84765224454971 */
-    latitude: 36.84765224454971,
-
-    /** Represents the centre longitude.
-      *
-      * @property longitude
-      * @type Number
-      * @default -76.2922677397728 */
-    longitude: -76.2922677397728,
+      * @property centre
+      * @type Position
+      * @default L.latLng(36.84765224454971, -76.2922677397728) */
+    centre: L.latLng(36.84765224454971, -76.2922677397728),
 
     actions: {
         /** Computation, public access to the geolocation function. 
@@ -54,25 +47,26 @@ Norfolkart.MapController = Ember.ArrayController.extend({
       * @method findMe */
     findMe: function () {
         'use strict';
+        var controller = this;
+
         window.navigator.geolocation.getCurrentPosition(
-            this.centerMap,
+            /** Computation, centres the map on the given geolocation position.
+              *
+              * NOTE: Have to use as a closure, since otherwise this is 
+              * undefined.
+              *
+              * @method centreMap
+              *
+              * @param {Position} position A Position value to centre the map 
+              *     upon. */
+            function centreMap(position) {
+                controller.set('centre', L.latLng(
+                    position.coords.latitude,
+                    position.coords.longitude
+                ));
+            },
             this.positionError
         );
-    },
-
-    /** Computation, centres the map on the given geolocation position.
-      *
-      * @method centerMap
-      *
-      * @param {Position} position A Position value to centre the map upon. */
-    centerMap: function (position) {
-        'use strict';
-
-        // Currently, just shows the coordinates.
-        alert(position.coords.latitude);
-        alert(position.coords.longitude);
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
     },
 
     /** Computation, alerts the user that a geolocation error occurred.
