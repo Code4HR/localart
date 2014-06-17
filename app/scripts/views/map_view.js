@@ -16,25 +16,98 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/** The model for the tile layer.
+  *
+  * @namespace Norfolkart
+  * @class TileLayer
+  * @extends EmberLeaflet.TileLayer
+  * @constructor */
 Norfolkart.TileLayer = EmberLeaflet.TileLayer.extend({
+    /** Represents the url for map tiles.
+      * Uses the Mapnik OpenStreetMap tile url.
+      *
+      * @property tileUrl
+      * @type String
+      * @default 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' */
     tileUrl: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 });
 
-Norfolkart.MarkerLayer = EmberLeaflet.MarkerLayer.extend(EmberLeaflet.PopupMixin, {
-    popupContentBinding: 'content.title'
-});
+/** The model for the marker layer.
+  *
+  * @namespace Norfolkart
+  * @class MarkerLayer
+  * @extends EmberLeaflet.MarkerLayer
+  * @constructor */
+Norfolkart.MarkerLayer =
+    EmberLeaflet.MarkerLayer.extend(EmberLeaflet.PopupMixin, {
+        /** Accessor function, returns a popup view HTMLDivElement.
+          *
+          * NOTE: Uses a very hacky implementation found by Lennart Hildebrandt
+          * found at https://github.com/gabesmed/ember-leaflet/issues/30.
+          *
+          * @method popupContent
+          * @return {HTMLDivElement} The popup view markup element. */
+        popupContent: function () {
+            'use strict';
+            var view =
+                this._parentLayer.createChildView(Norfolkart.MapPopupView);
+            view.set('context', this.get('content'));
+            Ember.View.states.inDOM.enter(view);
+            view.createElement();
+            return view.get('element');
+        }.property()
+    });
 
+/** The model for the marker collection layer.
+  *
+  * @namespace Norfolkart
+  * @class MarkerCollectionLayer
+  * @extends EmberLeaflet.MarkerCollectionLayer
+  * @constructor */
 Norfolkart.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
-      contentBinding: 'controller'
-    , itemLayerClass: Norfolkart.MarkerLayer
+    contentBinding: 'controller',
+    itemLayerClass: Norfolkart.MarkerLayer
 });
 
+/** The model for the map view.
+  *
+  * @namespace Norfolkart
+  * @class MapView
+  * @extends EmberLeaflet.MapView
+  * @constructor */
 Norfolkart.MapView = EmberLeaflet.MapView.extend({
-      classNames: ['map']
-    , centerBinding: 'controller.centre'
-    , zoom: 16
-    , childLayers: [
-	  Norfolkart.TileLayer
-	, Norfolkart.MarkerCollectionLayer
+    /** Represents the style classes to apply to this view. 
+      * Uses the map style class.
+      *
+      * @property classNames
+      * @type Array
+      * @default ['map'] */
+    classNames: ['map'],
+
+    /** Represents the element to bind the map centre to.
+      * Binds to the controller element centre.
+      *
+      * @property centerBinding
+      * @type String
+      * @default 'controller.centre' */
+    centerBinding: 'controller.centre',
+
+    /** Represents the starting zoom level of the map.
+      *
+      * @property zoom
+      * @type Number
+      * @default 16 */
+    zoom: 16,
+
+    /** Represents the associated child layers for the map.
+      * iArtNorfolk uses a tileset and a collection of markers to function.
+      *
+      * @property childLayers
+      * @type Array
+      * @default [Norfolkart.TileLayer, Norfolkart.MarkerCollectionLayer] */
+    childLayers: [
+        Norfolkart.TileLayer,
+        Norfolkart.MarkerCollectionLayer
     ]
 });
