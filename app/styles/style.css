@@ -30,7 +30,7 @@ html, body {
     float: left;
 }
 
-.record img {
+.record img, .thumbnail {
     width: 80px;
     height: 80px;
 }
