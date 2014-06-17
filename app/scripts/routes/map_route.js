@@ -44,7 +44,10 @@ Norfolkart.MapRoute = Ember.Route.extend({
                 location: L.latLng(
                     exhibit.get('latitude'),
                     exhibit.get('longitude')
-                )
+                ),
+                id: exhibit.get('id'),
+                title: exhibit.get('title'),
+                imageurl: exhibit.get('imageurl')
             };
         }));
     },
