@@ -52,6 +52,21 @@ Norfolkart.MapRoute = Ember.Route.extend({
         }));
     },
 
+    /** Computation, loads exhibits from a local JSON file.
+      *
+      * @method beforeModel */
+    beforeModel: function () {
+        'use strict';
+        var store = this.get('store');
+        Ember.$.getJSON('/exhibits.json')
+            .done(function (data) {
+                var i;
+                for (i = 0; i < data.length; i++) {
+                    store.push('exhibit', data[i]);
+                }
+            });
+    },
+
     /** Returns the map model, all exhibits.
       *
       * @method model
