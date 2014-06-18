@@ -25,7 +25,8 @@ Norfolkart.Exhibit = DS.Model.extend({
     location: DS.attr('string'),
     artists: DS.attr('string'),
     url: DS.attr('string'),
-    imageurl: DS.attr('string')
+    imageurl: DS.attr('string'),
+    fullimage: DS.attr('string')
 });
 
 // probably should be mixed-in...
@@ -55,7 +56,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'chrysler_museum_art_torch_bearers.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Chrysler_Museum/Torch_Bearers_Map.jpg'
+            + 'images/Chrysler_Museum/Torch_Bearers_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Chrysler_Museum/Torch_Bearers_LightBox.jpg'
     }, {
         id: 1,
         title: 'Anchor',
@@ -66,7 +69,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'chrysler_museum_art_anchor.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Chrysler_Museum/Anchor_Map.jpg'
+            + 'images/Chrysler_Museum/Anchor_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Chrysler_Museum/Anchor_LightBox.jpg'
     }, {
         id: 2,
         title: 'Big Six',
@@ -77,7 +82,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'chrysler_museum_art_bigsix.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Chrysler_Museum/Big_Six_Map.jpg'
+            + 'images/Chrysler_Museum/Big_Six_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Chrysler_Museum/Big_Six_LightBox.jpg'
     }, {
         id: 3,
         title: 'Floor Kite XII',
@@ -88,7 +95,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'chrysler_museum_art_floor_kite.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Chrysler_Museum/Floor_Kite_XII_Map.jpg'
+            + 'images/Chrysler_Museum/Floor_Kite_XII_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Chrysler_Museum/Floor_Kite_XII_LightBox.jpg'
     }, {
         id: 4,
         title: 'Leading Edge',
@@ -99,7 +108,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_leading_edge.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Leading_Edge_Map.jpg'
+            + 'images/Downtown_Art/Leading_Edge_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Leading_Edge_LightBox.jpg'
     }, {
         id: 5,
         title: 'Norfolk Confederate Soldier',
@@ -110,7 +121,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_confederate_soldier.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Confederate_Soldier_Map.jpg'
+            + 'images/Downtown_Art/Confederate_Soldier_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Confederate_Soldier_LightBo.jpg'
     }, {
         id: 6,
         title: 'Whaling Wall #47',
@@ -121,7 +134,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_whaling_wall.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Whaling_Wall_Map.jpg'
+            + 'images/Downtown_Art/Whaling_Wall_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Whaling_Wall_LightBox.jpg'
     }, {
         id: 7,
         title: 'Tower of Light',
@@ -132,7 +147,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_tower_of_light.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/tower_of_light_map.jpg'
+            + 'images/Downtown_Art/tower_of_light_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/tower_of_light_LightBox.jpg'
     }, {
         id: 8,
         title: 'Gold Medal Flour',
@@ -143,7 +160,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_gold_medal.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Gold_Medal_Flour_Map.jpg'
+            + 'images/Downtown_Art/Gold_Medal_Flour_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Gold_Medal_Flour_LightBox.jpg'
     }, {
         id: 9,
         title: 'Summer In The City',
@@ -154,7 +173,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_gmb.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/GMB_map.jpg'
+            + 'images/Downtown_Art/GMB_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/GMB_LBox.jpg'
     }, {
         id: 10,
         title: 'Eyes',
@@ -165,7 +186,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_eyes.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/EYES_map.jpg'
+            + 'images/Downtown_Art/EYES_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/EYES_MacArthurNorth_LBox.jpg'
     }, {
         id: 11,
         title: 'Bit By Bit',
@@ -176,7 +199,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_bitbybit.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/BITBYBIT_map.jpg'
+            + 'images/Downtown_Art/BITBYBIT_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/BITBYBIT_OVSenior_LBox.jpg'
     }, {
         id: 12,
         title: 'Norfolk 1851',
@@ -187,7 +212,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_norfolk_1851.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Norfolk_1851_Map.jpg'
+            + 'images/Downtown_Art/Norfolk_1851_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Norfolk_1851_LightBox.jpg'
     }, {
         id: 13,
         title: 'Celebration',
@@ -198,7 +225,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_celebration.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Celebration_SCOPE_map.jpg'
+            + 'images/Downtown_Art/Celebration_SCOPE_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Celebration_SCOPE_LightBox.jpg'
     }, {
         id: 14,
         title: 'Hampton Roads',
@@ -209,7 +238,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_hampton_roads.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Hampton_Roads_Map.jpg'
+            + 'images/Downtown_Art/Hampton_Roads_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Hampton_Roads_LightBox.jpg'
     }, {
         id: 15,
         title: 'General Douglas MacArhtur',
@@ -220,7 +251,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_general_macarthur.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/General_MacArthur_Map.jpg'
+            + 'images/Downtown_Art/General_MacArthur_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/General_MacArthur_LightBox.jpg'
     }, {
         id: 16,
         title: 'General Douglas MacArhtur Wading Ashore at Inchon',
@@ -231,7 +264,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_macarthur_at_inchon.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/MacArthur_plaque_Map.jpg'
+            + 'images/Downtown_Art/MacArthur_plaque_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/MacArthur_plaque_LightBox.jpg'
     }, {
         id: 17,
         title: 'Dr. Martin Luther King Memorial',
@@ -242,7 +277,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_martin_luther_king.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/king_memorial_Map.jpg'
+            + 'images/Downtown_Art/king_memorial_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/king_memorial_LightBox.jpg'
     }, {
         id: 18,
         title: 'Revolutionary War Cannons',
@@ -253,7 +290,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_revolutionary_war_cannons.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Rev_War_Cannons_Map.jpg'
+            + 'images/Downtown_Art/Rev_War_Cannons_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Rev_War_Cannons_LightBox.jpg'
     }, {
         id: 19,
         title: 'Armed Forces Memorial',
@@ -264,7 +303,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_armed_forces_memorial.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Armed_Forces_Memorial_Map.jpg'
+            + 'images/Downtown_Art/Armed_Forces_Memorial_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Armed_Forces_Memorial_Light.jpg'
     }, {
         id: 20,
         title: 'The Tourist',
@@ -275,7 +316,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_tourist.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Tourist_Map.jpg'
+            + 'images/Downtown_Art/Tourist_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Tourist_LightBox.jpg'
     }, {
         id: 21,
         title: 'Norfolk 1682 Plaque',
@@ -286,7 +329,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_norfolk_1682.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Norfolk_1682_Plaque_Map.jpg'
+            + 'images/Downtown_Art/Norfolk_1682_Plaque_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Norfolk_1682_War_LightBox.jpg'
     }, {
         id: 22,
         title: 'USS Antietam Anchor',
@@ -297,7 +342,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_antietam_anchor.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Antietam_Anchor_Map.jpg'
+            + 'images/Downtown_Art/Antietam_Anchor_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Antietam_Anchor_LightBox.jpg'
     }, {
         id: 23,
         title: 'Homecoming',
@@ -308,7 +355,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_homecoming.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Homecoming_Map.jpg'
+            + 'images/Downtown_Art/Homecoming_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Homecoming_LightBox.jpg'
     }, {
         id: 24,
         title: 'Waterwork',
@@ -319,7 +368,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_waterwork.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Waterwork_web_Map.jpg'
+            + 'images/Downtown_Art/Waterwork_web_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Waterwork_LightBox.jpg'
     }, {
         id: 25,
         title: 'Norfolk Now',
@@ -330,7 +381,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_norfolk_now.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/norfolk_now_Map.jpg'
+            + 'images/Downtown_Art/norfolk_now_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/norfolk_now_LightBox.jpg'
     }, {
         id: 26,
         title: 'Elizabeth River Festival',
@@ -341,7 +394,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_elizabeth_river_festival.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Elizabeth_River_Festival_ma.jpg'
+            + 'images/Downtown_Art/Elizabeth_River_Festival_ma.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Elizabeth_River_Festival_Li.jpg'
     }, {
         id: 27,
         title: 'Recording Angel',
@@ -352,7 +407,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_recording_angel.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/recording_angel_Map.jpg'
+            + 'images/Downtown_Art/recording_angel_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/recording_angel_LightBox.jpg'
     }, {
         id: 28,
         title: 'Sergeant William Carney',
@@ -363,7 +420,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_sergeant_william_carney.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/William_Carney_Map.jpg'
+            + 'images/Downtown_Art/William_Carney_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/William_Carney_LightBox.jpg'
     }, {
         id: 29,
         title: 'Ripples',
@@ -374,7 +433,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_ripples.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Ripples_Map.jpg'
+            + 'images/Downtown_Art/Ripples_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Ripples_LightBox.jpg'
     }, {
         id: 30,
         title: 'The Flame of Liberty',
@@ -385,7 +446,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_flame_liberty.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Flame_Liberty_Map.jpg'
+            + 'images/Downtown_Art/Flame_Liberty_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Flame_Liberty_LightBox.jpg'
     }, {
         id: 31,
         title: 'Police Memorial Bell',
@@ -396,7 +459,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_police_memorial_bell.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Memorial_Bell_Map.jpg'
+            + 'images/Downtown_Art/Memorial_Bell_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Memorial_Bell_LightBox.jpg'
     }, {
         id: 32,
         title: 'Flight of the Seagulls',
@@ -407,7 +472,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_flight_of_the_seagulls.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Flight_of_the_Seagulls_map.jpg'
+            + 'images/Downtown_Art/Flight_of_the_Seagulls_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Flight_of_the_Seagulls_Ligh.jpg'
     }, {
         id: 33,
         title: 'Ligne Indeterminee',
@@ -418,7 +485,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_ligne_indeterminee.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Ligne_Indeterminee_Map.jpg'
+            + 'images/Downtown_Art/Ligne_Indeterminee_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Ligne_Indeterminee_LightBox.jpg'
     }, {
         id: 34,
         title: 'Lone Sailor',
@@ -429,7 +498,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_lone_sailor.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Lone_Sailor_Map.jpg'
+            + 'images/Downtown_Art/Lone_Sailor_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Lone_Sailor_LightBox.jpg'
     }, {
         id: 35,
         title: 'USS Norfolk Bell',
@@ -440,7 +511,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_uss_norfolk_bell.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/USS_Norfolk_Bell_Map.jpg'
+            + 'images/Downtown_Art/USS_Norfolk_Bell_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/USS_Norfolk_Bell_LightBox.jpg'
     }, {
         id: 36,
         title: 'General George Washington',
@@ -451,7 +524,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_george_washington.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/george_washington_Map.jpg'
+            + 'images/Downtown_Art/george_washington_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/george_washington_LightBox.jpg'
     }, {
         id: 37,
         title: 'Good Fortune Garage',
@@ -462,7 +537,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_good_fortune_garage.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Good_Fortune_Garage_Map.jpg'
+            + 'images/Downtown_Art/Good_Fortune_Garage_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Good_Fortune_Garage_LB.jpg'
     }, {
         id: 38,
         title: 'Sign of the Times Garage',
@@ -473,7 +550,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_sign_ofthe_times.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Sign_ofthe_Times2_map.jpg'
+            + 'images/Downtown_Art/Sign_ofthe_Times2_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Sign_ofthe_Times2_LightBox.jpg'
     }, {
         id: 39,
         title: 'Wind and Waves Garage',
@@ -484,7 +563,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_wind_and_waves_garage.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Wind_and_Waves_map.jpg'
+            + 'images/Downtown_Art/Wind_and_Waves_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/Wind_and_Waves_LightBox.jpg'
     }, {
         id: 40,
         title: 'All Things Within All Things',
@@ -495,7 +576,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_zoo_all_things.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/Map_Zoo_All_Things_Within_A.jpg'
+            + 'images/Downtown_Art/Map_Zoo_All_Things_Within_A.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/LightBox_Zoo_All_Things_Wit.jpg'
     }, {
         id: 41,
         title: 'Canada Geese',
@@ -506,7 +589,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_canada_geese_garage.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/map_Laura_Grant_yorkstgarag.jpg'
+            + 'images/Downtown_Art/map_Laura_Grant_yorkstgarag.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/LightBox_Laura_Grant_yorkst.jpg'
     }, {
         id: 42,
         title: 'Norfolk Attractions',
@@ -517,7 +602,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_norfolk_attractions_garage.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/map_Jeannine_harkleroad_plu.jpg'
+            + 'images/Downtown_Art/map_Jeannine_harkleroad_plu.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/LightBox_Jeannine_harkleroa.jpg'
     }, {
         id: 43,
         title: 'Symbols of Peace',
@@ -528,7 +615,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_symbols_peace_garage.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/map_RichardWard_CommericalG.jpg'
+            + 'images/Downtown_Art/map_RichardWard_CommericalG.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/LightBox_RichardWard_Commer.jpg'
     }, {
         id: 44,
         title: 'Sunburst',
@@ -539,7 +628,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_sunburst.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/map_pretlow_sunburst.jpg'
+            + 'images/Downtown_Art/map_pretlow_sunburst.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/pretlow_sunburst_LBox.jpg'
     }, {
         id: 45,
         title: 'Book Migration',
@@ -550,7 +641,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_book_migration.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/map_book_migration.jpg'
+            + 'images/Downtown_Art/map_book_migration.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/book_migration_LBox.jpg'
     }, {
         id: 46,
         title: 'Storyteller',
@@ -561,7 +654,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_storyteller.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/storyteller_map.jpg'
+            + 'images/Downtown_Art/storyteller_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/storyteller_LightBox.jpg'
     }, {
         id: 47,
         title: 'Enchanted Garden - Gate',
@@ -572,7 +667,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_enchanted_garden_gate.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/coleman_elementary_gate_map.jpg'
+            + 'images/Downtown_Art/coleman_elementary_gate_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/coleman_elementary_gate_LB.jpg'
     }, {
         id: 48,
         title: 'Enchanted Garden - Wall Mural',
@@ -583,7 +680,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'downtown_art_enchanted_garden_wall_mural.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Downtown_Art/coleman_elem_wallmural_map.jpg'
+            + 'images/Downtown_Art/coleman_elem_wallmural_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Downtown_Art/coleman_elem_wallmural_LB.jpg'
     }, {
         id: 49,
         title: 'Raphael',
@@ -594,7 +693,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_raphael.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Raphael_Map2.jpg'
+            + 'images/Botanical_Garden/Raphael_Map2.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Raphael_LightBox.jpg'
     }, {
         id: 50,
         title: 'Canova',
@@ -605,7 +706,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_canova.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Canova_Map.jpg'
+            + 'images/Botanical_Garden/Canova_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Canova_LightBox.jpg'
     }, {
         id: 51,
         title: 'DaVinci',
@@ -616,7 +719,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_davinci.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/DaVinci_Map.jpg'
+            + 'images/Botanical_Garden/DaVinci_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/DaVinci_LightBox.jpg'
     }, {
         id: 52,
         title: 'Crawford',
@@ -627,7 +732,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_crawford.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Crawford_Map.jpg'
+            + 'images/Botanical_Garden/Crawford_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Crawford_LightBox.jpg'
     }, {
         id: 53,
         title: 'Rubens',
@@ -638,7 +745,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_rubens.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Rubens_Map.jpg'
+            + 'images/Botanical_Garden/Rubens_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Rubens_LightBox.jpg'
     }, {
         id: 54,
         title: 'Phidias',
@@ -649,7 +758,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_phidias.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Phidias_Map.jpg'
+            + 'images/Botanical_Garden/Phidias_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Phidias_LightBox.jpg'
     }, {
         id: 55,
         title: 'Durer',
@@ -660,7 +771,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_durer.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Durer_Map.jpg'
+            + 'images/Botanical_Garden/Durer_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Durer_LightBox.jpg'
     }, {
         id: 56,
         title: 'Rembrandt',
@@ -671,7 +784,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_rembrandt.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Rembrandt_Map.jpg'
+            + 'images/Botanical_Garden/Rembrandt_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Rembrandt_LightBox.jpg'
     }, {
         id: 57,
         title: 'Murillo',
@@ -682,7 +797,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_murillo.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Murillo_Map.jpg'
+            + 'images/Botanical_Garden/Murillo_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Murillo_LightBox.jpg'
     }, {
         id: 58,
         title: 'Titian',
@@ -693,7 +810,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_titian.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Titian_Map.jpg'
+            + 'images/Botanical_Garden/Titian_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Titian_LightBox.jpg'
     }, {
         id: 59,
         title: 'Angelo',
@@ -704,7 +823,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_angelo.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Angelo_Map.jpg'
+            + 'images/Botanical_Garden/Angelo_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Angelo_LightBox.jpg'
     }, {
         id: 60,
         title: 'Eagle and Chicks',
@@ -715,7 +836,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_eagle_chicks.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Eagle_and_Chicks_Map.jpg'
+            + 'images/Botanical_Garden/Eagle_and_Chicks_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Eagle_and_Chicks_LightBox.jpg'
     }, {
         id: 61,
         title: 'Bronze Maidens',
@@ -726,7 +849,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_maidens.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Maidens_Map.jpg'
+            + 'images/Botanical_Garden/Maidens_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Maidens_LightBox.jpg'
     }, {
         id: 62,
         title: 'St. Francis',
@@ -737,7 +862,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_stfrancis.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/St_Francis_Map.jpg'
+            + 'images/Botanical_Garden/St_Francis_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/St_Francis_LightBox.jpg'
     }, {
         id: 63,
         title: 'Virgin and Child',
@@ -748,7 +875,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_vigin_child.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Virgin_Child_Map.jpg'
+            + 'images/Botanical_Garden/Virgin_Child_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Virgin_Child_LightBox.jpg'
     }, {
         id: 64,
         title: 'Hunters Herons',
@@ -759,7 +888,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_hunter_herons.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Hunters_Herons_Map.jpg'
+            + 'images/Botanical_Garden/Hunters_Herons_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Hunters_Herons_LightBox.jpg'
     }, {
         id: 65,
         title: 'Season Maid Wheat',
@@ -770,7 +901,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_seasonmaid_wheat.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Season_Maid_Wheat_Map.jpg'
+            + 'images/Botanical_Garden/Season_Maid_Wheat_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Season_Maid_Wheat_LightBox.jpg'
     }, {
         id: 66,
         title: 'Season Maid Grape',
@@ -781,7 +914,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_seasonmaid_grape.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Season_Maid_Grape_Map.jpg'
+            + 'images/Botanical_Garden/Season_Maid_Grape_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Season_Maid_Grape_LightBox.jpg'
     }, {
         id: 67,
         title: 'Season Maid Iris',
@@ -792,7 +927,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_seasonmaid_iris.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Season_Maid_Iris_Map.jpg'
+            + 'images/Botanical_Garden/Season_Maid_Iris_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Season_Maid_Iris_LightBox.jpg'
     }, {
         id: 68,
         title: 'Season Maid Thistle',
@@ -803,7 +940,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_seasonmaid_thistle.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Season_Maid_Thistle_Map.jpg'
+            + 'images/Botanical_Garden/Season_Maid_Thistle_Map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Season_Maid_Thistle_LightBo.jpg'
     }, {
         id: 69,
         title: 'Turner Fish',
@@ -814,7 +953,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_turner_fish.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Turner_fish_map.jpg'
+            + 'images/Botanical_Garden/Turner_fish_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Turner_fish_LightBox.jpg'
     }, {
         id: 70,
         title: 'Turner Bird',
@@ -825,7 +966,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_turner_bird.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Turner_fish_map.jpg'
+            + 'images/Botanical_Garden/Turner_fish_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Turner_fish_LightBox.jpg'
     }, {
         id: 71,
         title: 'Turner Pelican',
@@ -836,7 +979,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_turner_pelican.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Turner_pelican_map.jpg'
+            + 'images/Botanical_Garden/Turner_pelican_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Turner_pelican_LightBox.jpg'
     }, {
         id: 72,
         title: 'Turner Otter',
@@ -847,7 +992,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_turner_otter.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Turner_otter_map.jpg'
+            + 'images/Botanical_Garden/Turner_otter_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Turner_otter_LightBox.jpg'
     }, {
         id: 73,
         title: 'Turner Eagle',
@@ -858,7 +1005,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_turner_eagle.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Turner_eagle_map.jpg'
+            + 'images/Botanical_Garden/Turner_eagle_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Turner_eagle_LightBox.jpg'
     }, {
         id: 74,
         title: 'Turner Ducks',
@@ -869,7 +1018,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_turner_ducks.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Turner_ducks_map.jpg'
+            + 'images/Botanical_Garden/Turner_ducks_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Turner_ducks_LightBox.jpg'
     }, {
         id: 75,
         title: 'Turner Frog',
@@ -880,7 +1031,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_turner_frog.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Turner_frog_map.jpg'
+            + 'images/Botanical_Garden/Turner_frog_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Turner_frog_LightBox.jpg'
     }, {
         id: 76,
         title: 'Turner Goose',
@@ -891,7 +1044,9 @@ Norfolkart.Exhibit.FIXTURES = [
         url: 'http://www.norfolkva.gov/cultural_affairs/'
             + 'botanical_garden_art_turner_goose.asp',
         imageurl: 'http://www.norfolkva.gov/cultural_affairs/'
-            + 'images/Botanical_Garden/Turner_goose_map.jpg'
+            + 'images/Botanical_Garden/Turner_goose_map.jpg',
+        fullimage: 'http://www.norfolkva.gov/cultural_affairs/'
+            + 'images/Botanical_Garden/Turner_goose_LightBox.jpg'
     }
 ];
 
