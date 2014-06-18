@@ -30,9 +30,14 @@ html, body {
     float: left;
 }
 
-.record img, .thumbnail {
+.thumbnail {
     width: 80px;
     height: 80px;
+}
+
+.arrow {
+    float: right;
+    vertical-align: middle;
 }
 
 .map {
