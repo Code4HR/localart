@@ -30,7 +30,7 @@ Norfolkart.ApplicationRoute = Ember.Route.extend({
     beforeModel: function () {
         'use strict';
         var store = this.get('store');
-        Ember.$.getJSON('exhibits.json')
+        Ember.$.getJSON('/exhibits.json')
             .done(function (data) {
                 var i;
                 for (i = 0; i < data.length; i++) {
