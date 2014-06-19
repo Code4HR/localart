@@ -24,12 +24,20 @@
 Norfolkart.MapController = Ember.ArrayController.extend({
     // Implement your controller here.
 
-    /** Represents the map centre.
+    /** Represents the current map centre.
       *
       * @property centre
       * @type Position
       * @default L.latLng(36.84765224454971, -76.2922677397728) */
     centre: L.latLng(36.84765224454971, -76.2922677397728),
+
+
+    /** Represents the current map zoom.
+      *
+      * @property zoom
+      * @type Number
+      * @default 16 */
+    zoom: 16,
 
     actions: {
         /** Computation, public access to the geolocation function. 

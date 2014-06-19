@@ -93,12 +93,12 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       * @default 'controller.centre' */
     centerBinding: 'controller.centre',
 
-    /** Represents the starting zoom level of the map.
+    /** Represents the element to bind the map zoom to.
       *
-      * @property zoom
-      * @type Number
-      * @default 16 */
-    zoom: 16,
+      * @property zoomBinding
+      * @type String
+      * @default 'controller.zoom' */
+    zoomBinding: 'controller.zoom',
 
     /** Represents the associated child layers for the map.
       * iArtNorfolk uses a tileset and a collection of markers to function.
