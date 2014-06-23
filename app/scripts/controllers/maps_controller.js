@@ -72,6 +72,7 @@ Norfolkart.MapController = Ember.ArrayController.extend({
                     position.coords.latitude,
                     position.coords.longitude
                 ));
+                controller.transitionToRoute('map');
             },
             this.positionError
         );

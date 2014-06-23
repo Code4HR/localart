@@ -54,3 +54,13 @@ html, body {
 .navbar button {
     float: left;
 }
+
+#jslicense-labels1  {
+    margin-left: auto;
+    margin-right: auto;
+    border: outset 1px;
+}
+
+#jslicense-labels1 td {
+    border: inset 1px;
+}
