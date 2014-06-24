@@ -17,8 +17,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 Norfolkart.ExhibitsRoute = Ember.Route.extend({
-  model: function () {
-    return this.get('store').find('exhibit');
-  }
+    model: function () {
+        'use strict';
+        return this.get('store').find('exhibit');
+    }
 });
 
