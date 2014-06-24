@@ -27,7 +27,7 @@ Norfolkart.MapController = Ember.ArrayController.extend({
     /** Represents the current map centre.
       *
       * @property centre
-      * @type Position
+      * @type L.LatLng
       * @default L.latLng(36.84765224454971, -76.2922677397728) */
     centre: L.latLng(36.84765224454971, -76.2922677397728),
 
@@ -92,7 +92,7 @@ Norfolkart.MapController = Ember.ArrayController.extend({
             'Timeout.'
         ];
         alert(
-            messages.indexOf(error.code - 1) > -1 ?
+            error.code - 1 > -1 ?
                     messages[error.code - 1] :
                     'Unknown error.'
         );
