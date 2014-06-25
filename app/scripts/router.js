@@ -17,6 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 Norfolkart.Router.map(function () {
+    'use strict';
     this.resource('exhibits');
     this.resource('exhibit', { path: '/exhibit/:exhibit_id' });
     this.resource('map');

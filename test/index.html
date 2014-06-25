@@ -1,27 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--
+    An HTML5 mobile app for navigating & browsing locations of public art, 
+    architecture, and culture in Norfolk, VA. 
+    Copyright (C) 2014 Ryan Y.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    -->
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mocha Spec Runner</title>
-    <link rel="stylesheet" href="bower_components/mocha/mocha.css">
-</head>
-<body>
-    <div id="mocha"></div>
-    <script src="bower_components/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd')</script>
-    <script src="bower_components/chai/chai.js"></script>
-    <script>
-        var assert = chai.assert;
-        var expect = chai.expect;
-        var should = chai.should();
-    </script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- include source files here... -->
+        <title>
+            Mocha Spec Runner
+        </title>
 
-    <!-- include spec files here... -->
-    <script src="spec/test.js"></script>
+        <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+    </head>
 
-    <script>mocha.run()</script>
-</body>
+    <body>
+        <div id="mocha">
+        </div>
+
+        <div id="mocha-fixture">
+        </div>
+
+        <script src="bower_components/mocha/mocha.js"></script>
+
+        <script type="text/javascript">
+            mocha.setup('tdd')
+        </script>
+
+
+        <!-- build:js(app) scripts/components.js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/handlebars/handlebars.js"></script>
+        <script src="@@ember"></script>
+        <script src="@@ember_data"></script>
+        <!-- endbuild -->
+
+        <!-- bower:js -->
+        <script src="bower_components/chai/chai.js"></script>
+        <script src="bower_components/ember/ember.js"></script>
+        <script src="bower_components/ember-data/ember-data.js"></script>
+        <script src="bower_components/leaflet/dist/leaflet-src.js"></script>
+        <script src="bower_components/ember-leaflet/dist/ember-leaflet.js"></script>
+        <script src="bower_components/ember-mocha-adapter/adapter.js"></script>
+        <!-- endbower -->
+
+        <script type="text/javascript" src="sinon-1.10.2.js">
+        </script>
+
+        <!-- include source files here... -->
+        <script type="text/javascript" src="../app/scripts/app.js">
+        </script>
+
+        <script type="text/javascript" src="../app/scripts/controllers/application_controller.js">
+        </script>
+
+        <script type="text/javascript" src="../app/scripts/controllers/maps_controller.js">
+        </script>
+
+        <script type="text/javascript" src="../app/scripts/routes/application_controller.js">
+        </script>
+
+        <script type="text/javascript" src="../app/scripts/routes/exhibits_controller.js">
+        </script>
+
+        <script type="text/javascript" src="../app/scripts/routes/exhibit_controller.js">
+        </script>
+
+        <script type="text/javascript" src="../app/scripts/routes/index_controller.js">
+        </script>
+
+        <script type="text/javascript" src="../app/scripts/routes/map_controller.js">
+        </script>
+
+        <script type="text/javascript" src="../app/scripts/views/map_view.js">
+        </script>
+
+        <!-- include spec files here... -->
+        <script type="text/javascript" src="spec/test.js">
+        </script>
+
+        <script type="text/javascript">
+            Ember.$(function () {
+                mocha.run()
+            });
+        </script>
+    </body>
 </html>
