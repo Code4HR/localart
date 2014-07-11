@@ -28,7 +28,7 @@ Norfolkart.ExhibitsRoute = Ember.Route.extend({
       *
       * @method model
       *
-      * @returns {DS.Model} All exhibits. */
+      * @return {DS.Model} All exhibits. */
     model: function () {
         'use strict';
         return this.get('store').find('exhibit');
