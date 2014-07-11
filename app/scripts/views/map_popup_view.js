@@ -17,18 +17,22 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/** The model for the map popup view.
+/** 
+  * The model for the map popup view.
   *
   * @namespace Norfolkart
   * @class MapPopupView
   * @extends Ember.View
-  * @constructor */
+  * @constructor
+  */
 Norfolkart.MapPopupView = Ember.View.extend({
-    /** Represents the Handlebars template used for this view.
+    /** 
+      * Represents the Handlebars template used for this view.
       *
       * @property templateName
       * @type String
-      * @default 'map-popup' */
+      * @default 'map-popup'
+      */
     templateName: 'map-popup'
 });
 
