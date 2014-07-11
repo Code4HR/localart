@@ -16,7 +16,19 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/** The exhibits route model.
+  *
+  * @class ExhibitsRoute
+  * @namespace Norfolkart
+  * @constructor
+  * @extends Ember.Route */
 Norfolkart.ExhibitsRoute = Ember.Route.extend({
+    /** Returns all exhibits.
+      *
+      * @method model
+      *
+      * @returns {DS.Model} All exhibits. */
     model: function () {
         'use strict';
         return this.get('store').find('exhibit');
