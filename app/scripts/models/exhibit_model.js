@@ -18,14 +18,77 @@
  */
 
 /*global Ember*/
+
+/** The exhibit model.
+  *
+  * @class Exhibit
+  * @namespace Norfolkart
+  * @constructor
+  * @extends DS.Model */
 Norfolkart.Exhibit = DS.Model.extend({
+    /** Represents the exhibit title.
+      *
+      * @property title
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('string') */
     title: DS.attr('string'),
+    
+    /** Represents the exhibit latitude.
+      *
+      * @property title
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('number') */
     latitude: DS.attr('number'),
+    
+    /** Represents the exhibit longitude.
+      *
+      * @property longitude
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('number') */
     longitude: DS.attr('number'),
+    
+    /** Represents the exhibit location.
+      * A short brain-friendly description of where to find this exhibit.
+      *
+      * @property location
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('string') */
     location: DS.attr('string'),
+    
+    /** Represents the exhibit artists.
+      *
+      * @property artists
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('string') */
     artists: DS.attr('string'),
+    
+    /** Represents the exhibit URL on the City of Norfolk website.
+      *
+      * @property url
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('string') */
     url: DS.attr('string'),
+    
+    /** Represents the exhibit thumbnail image URL on the City of Norfolk website.
+      *
+      * @property imageurl
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('string') */
     imageurl: DS.attr('string'),
+    
+    /** Represents the exhibit full-size image URL on the City of Norfolk website.
+      *
+      * @property fullimage
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('string') */
     fullimage: DS.attr('string')
 });
 
@@ -44,6 +107,5 @@ Norfolkart.Exhibit.reopen({
     }.property()
 });
 
-// delete below here if you do not want fixtures
 Norfolkart.Exhibit.FIXTURES = [];
 

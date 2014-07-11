@@ -16,7 +16,21 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/** The exhibit route model.
+  *
+  * @class ExhibitRoute
+  * @namespace Norfolkart
+  * @constructor
+  * @extends Ember.Route */
 Norfolkart.ExhibitRoute = Ember.Route.extend({
+    /** Returns the exhibit with the specified id.
+      *
+      * @method model
+      *
+      * @param {Object} params The query parameters for the URL.
+      *
+      * @return {DS.Model} The exhibit with the specified id. */
     model: function (params) {
         'use strict';
         return this.get('store').find('exhibit', params.exhibit_id);

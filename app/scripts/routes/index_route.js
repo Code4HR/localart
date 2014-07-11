@@ -16,7 +16,17 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/** The index route model.
+  *
+  * @class IndexRoute
+  * @namespace Norfolkart
+  * @constructor
+  * @extends Ember.Route */
 Norfolkart.IndexRoute = Ember.Route.extend({
+    /** Computation, transitions to the map route before loading the model.
+      *
+      * @method beforeModel */
     beforeModel: function () {
         'use strict';
         this.transitionTo('map');
