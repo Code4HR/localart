@@ -6,7 +6,7 @@ An HTML5 mobile app for navigating &amp; browsing locations of public art, archi
 Prerequisites
 =============
 
-    npm install -g yo
+    npm install -g yo yuidocjs
     
 Installation
 ============
@@ -16,3 +16,4 @@ Installation
 Currently, `grunt test` fails all unit tests.  Open `test/index.html` to run unit tests for the moment.
 Debug with `grunt serve`.
 Build with `grunt build`.
+Generate documentation with `yuidoc .`.
