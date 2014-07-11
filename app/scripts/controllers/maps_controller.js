@@ -22,8 +22,6 @@
   * @class MapController
   * @constructor */
 Norfolkart.MapController = Ember.ArrayController.extend({
-    // Implement your controller here.
-
     /** Represents the current map centre.
       *
       * @property centre
