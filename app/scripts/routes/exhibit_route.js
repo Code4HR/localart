@@ -30,7 +30,7 @@ Norfolkart.ExhibitRoute = Ember.Route.extend({
       *
       * @param {Object} params The query parameters for the URL.
       *
-      * @returns {DS.Model} The exhibit with the specified id. */
+      * @return {DS.Model} The exhibit with the specified id. */
     model: function (params) {
         'use strict';
         return this.get('store').find('exhibit', params.exhibit_id);
