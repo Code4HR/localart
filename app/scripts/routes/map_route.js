@@ -17,28 +17,36 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/** The model for the map route.
+/** 
+  * The model for the map route.
   *
   * @class MapRoute
-  * @constructor */
+  * @namespace Norfolkart
+  * @constructor
+  * @extends Ember.Route
+  */
 Norfolkart.MapRoute = Ember.Route.extend({
-    /** Computation, configures the map route controller with exhibit 
+    /** 
+      * Computation, configures the map route controller with exhibit 
       * coordinates.
       *
       * @method setupController
       * @param {Ember.Controller} controller The map controller.
-      * @param {DS.Model} model The map model, all exhibits. */
+      * @param {DS.Model} model The map model, all exhibits.
+      */
     setupController: function (controller, model) {
         'use strict';
 
-        /** Map function, returns a value with just a location element 
+        /** 
+          * Map function, returns a value with just a location element 
           * representing the exhibit coordinates.
           *
           * @param {Norfolkart.Exhibit} exhibit The current exhibit.
           * @param {Number} i The current exhibit index.
           * @param {Ember.Array} The exhibit list.
           *
-          * @return {Ember.Array} The exhibit coordinates list. */
+          * @return {Ember.Array} The exhibit coordinates list.
+          */
         controller.set('content', model.map(function (exhibit, i, list) {
             return {
                 location: L.latLng(
@@ -52,11 +60,13 @@ Norfolkart.MapRoute = Ember.Route.extend({
         }));
     },
 
-    /** Returns the map model, all exhibits.
+    /** 
+      * Returns the map model, all exhibits.
       *
       * @method model
       *
-      * @return {DS.Model} All exhibits. */
+      * @return {DS.Model} All exhibits.
+      */
     model: function () {
         'use strict';
         return this.get('store').find('exhibit');

@@ -17,45 +17,58 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/** The model for the map controller.
+/** 
+  * The model for the map controller.
   *
   * @class MapController
-  * @constructor */
+  * @namespace Norfolkart
+  * @constructor 
+  * @extends Ember.ArrayController
+  */
 Norfolkart.MapController = Ember.ArrayController.extend({
-    /** Represents the current map centre.
+    /** 
+      * Represents the current map centre.
       *
       * @property centre
       * @type L.LatLng
-      * @default L.latLng(36.84765224454971, -76.2922677397728) */
+      * @default L.latLng(36.84765224454971, -76.2922677397728)
+      */
     centre: L.latLng(36.84765224454971, -76.2922677397728),
 
-    /** Represents the current map zoom.
+    /** 
+      * Represents the current map zoom.
       *
       * @property zoom
       * @type Number
-      * @default 16 */
+      * @default 16
+      */
     zoom: 16,
 
     actions: {
-        /** Computation, public access to the geolocation function. 
+        /** 
+          * Computation, public access to the geolocation function. 
           *
           * @public
-          * @method findMe */
+          * @method findMe
+          */
         findMe: function () {
             'use strict';
             this.findMe();
         }
     },
 
-    /** Computation, gets the current geolocation position of the user. 
+    /** 
+      * Computation, gets the current geolocation position of the user. 
       *
-      * @method findMe */
+      * @method findMe
+      */
     findMe: function () {
         'use strict';
         var controller = this;
 
         window.navigator.geolocation.getCurrentPosition(
-            /** Computation, centres the map on the given geolocation position.
+            /** 
+              * Computation, centres the map on the given geolocation position.
               *
               * NOTE: Have to use as a closure, since otherwise this is 
               * undefined.
@@ -63,7 +76,8 @@ Norfolkart.MapController = Ember.ArrayController.extend({
               * @method centreMap
               *
               * @param {Position} position A Position value to centre the map 
-              *     upon. */
+              *     upon.
+              */
             function centreMap(position) {
                 controller.set('centre', L.latLng(
                     position.coords.latitude,
@@ -75,12 +89,14 @@ Norfolkart.MapController = Ember.ArrayController.extend({
         );
     },
 
-    /** Computation, alerts the user that a geolocation error occurred.
+    /** 
+      * Computation, alerts the user that a geolocation error occurred.
       *
       * @method positionError
       *
       * @param {PositionError} error A PositionError value representing the 
-      *     error. */
+      * error.
+      */
     positionError: function (error) {
         'use strict';
         var messages = [

@@ -17,37 +17,45 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/** The model for the tile layer.
+/** 
+  * The model for the tile layer.
   *
   * @namespace Norfolkart
   * @class TileLayer
   * @extends EmberLeaflet.TileLayer
-  * @constructor */
+  * @constructor
+  */
 Norfolkart.TileLayer = EmberLeaflet.TileLayer.extend({
-    /** Represents the url for map tiles.
+    /** 
+      * Represents the url for map tiles.
       * Uses the Mapnik OpenStreetMap tile url.
       *
       * @property tileUrl
       * @type String
-      * @default 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' */
+      * @default 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+      */
     tileUrl: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 });
 
-/** The model for the marker layer.
+/** 
+  * The model for the marker layer.
   *
   * @namespace Norfolkart
   * @class MarkerLayer
   * @extends EmberLeaflet.MarkerLayer
-  * @constructor */
+  * @constructor
+  */
 Norfolkart.MarkerLayer =
     EmberLeaflet.MarkerLayer.extend(EmberLeaflet.PopupMixin, {
-        /** Accessor function, returns a popup view HTMLDivElement.
+        /** 
+          * Accessor function, returns a popup view HTMLDivElement.
           *
           * NOTE: Uses a very hacky implementation found by Lennart Hildebrandt
           * found at https://github.com/gabesmed/ember-leaflet/issues/30.
           *
           * @method popupContent
-          * @return {HTMLDivElement} The popup view markup element. */
+          * @return {HTMLDivElement} The popup view markup element.
+          */
         popupContent: function () {
             'use strict';
             var view =
@@ -59,64 +67,80 @@ Norfolkart.MarkerLayer =
         }.property()
     });
 
-/** The model for the marker collection layer.
+/** 
+  * The model for the marker collection layer.
   *
   * @namespace Norfolkart
   * @class MarkerCollectionLayer
   * @extends EmberLeaflet.MarkerCollectionLayer
-  * @constructor */
+  * @constructor
+  */
 Norfolkart.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
-    /** Represents the element to bind the content element to.
+    /** 
+      * Represents the element to bind the content element to.
       *
       * @property contentBinding
       * @type String
-      * @default 'controller' */
+      * @default 'controller'
+      */
     contentBinding: 'controller',
     
-    /** Represents the layer for extra items on the map.
+    /** 
+      * Represents the layer for extra items on the map.
       *
       * @property itemLayerClass
       * @type EmberLeaflet.MarkerLayer
-      * @default Norfolkart.MarkerLayer */
+      * @default Norfolkart.MarkerLayer
+      */
     itemLayerClass: Norfolkart.MarkerLayer
 });
 
-/** The model for the map view.
+/** 
+  * The model for the map view.
   *
   * @namespace Norfolkart
   * @class MapView
   * @extends EmberLeaflet.MapView
-  * @constructor */
+  * @constructor
+  */
 Norfolkart.MapView = EmberLeaflet.MapView.extend({
-    /** Represents the style classes to apply to this view. 
+    /** 
+      * Represents the style classes to apply to this view. 
       * Uses the map style class.
       *
       * @property classNames
       * @type Array
-      * @default ['map'] */
+      * @default ['map']
+      */
     classNames: ['map'],
 
-    /** Represents the element to bind the map centre to.
+    /** 
+      * Represents the element to bind the map centre to.
       * Binds to the controller element centre.
       *
       * @property centerBinding
       * @type String
-      * @default 'controller.centre' */
+      * @default 'controller.centre'
+      */
     centerBinding: 'controller.centre',
 
-    /** Represents the element to bind the map zoom to.
+    /** 
+      * Represents the element to bind the map zoom to.
       *
       * @property zoomBinding
       * @type String
-      * @default 'controller.zoom' */
+      * @default 'controller.zoom'
+      */
     zoomBinding: 'controller.zoom',
 
-    /** Represents the associated child layers for the map.
+    /** 
+      * Represents the associated child layers for the map.
       * iArtNorfolk uses a tileset and a collection of markers to function.
       *
       * @property childLayers
       * @type Array
-      * @default [Norfolkart.TileLayer, Norfolkart.MarkerCollectionLayer] */
+      * @default [Norfolkart.TileLayer, Norfolkart.MarkerCollectionLayer]
+      */
     childLayers: [
         Norfolkart.TileLayer,
         Norfolkart.MarkerCollectionLayer

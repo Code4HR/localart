@@ -17,18 +17,22 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/** The exhibits route model.
+/** 
+  * The exhibits route model.
   *
   * @class ExhibitsRoute
   * @namespace Norfolkart
   * @constructor
-  * @extends Ember.Route */
+  * @extends Ember.Route
+  */
 Norfolkart.ExhibitsRoute = Ember.Route.extend({
-    /** Returns all exhibits.
+    /** 
+      * Returns all exhibits.
       *
       * @method model
       *
-      * @return {DS.Model} All exhibits. */
+      * @return {DS.Model} All exhibits.
+      */
     model: function () {
         'use strict';
         return this.get('store').find('exhibit');

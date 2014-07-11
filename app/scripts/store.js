@@ -16,6 +16,23 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/** 
+  * The model for the application adapter.
+  *
+  * @class ApplicationAdapter
+  * @constructor 
+  * @namespace Norfolkart
+  * @extends DS.RESTAdapter
+  */
 Norfolkart.ApplicationAdapter = DS.RESTAdapter.extend({
+    /**
+      * Represents the host to pull data from.
+      *
+      * @property host
+      * @readonly
+      * @type String
+      * @default 'http://norfolkart.herokuapp.com'
+      */
     host: 'http://norfolkart.herokuapp.com'
 });
