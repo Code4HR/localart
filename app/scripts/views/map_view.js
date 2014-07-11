@@ -66,7 +66,18 @@ Norfolkart.MarkerLayer =
   * @extends EmberLeaflet.MarkerCollectionLayer
   * @constructor */
 Norfolkart.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
+    /** Represents the element to bind the content element to.
+      *
+      * @property contentBinding
+      * @type String
+      * @default 'controller' */
     contentBinding: 'controller',
+    
+    /** Represents the layer for extra items on the map.
+      *
+      * @property itemLayerClass
+      * @type EmberLeaflet.MarkerLayer
+      * @default Norfolkart.MarkerLayer */
     itemLayerClass: Norfolkart.MarkerLayer
 });
 
