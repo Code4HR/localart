@@ -13,10 +13,11 @@ Installation
 
     npm install && bower install && cd test && bower install && cd ..
     
+Generate documentation with `yuidoc .`.
+
 Currently, `grunt test` fails all unit tests.  Open `test/index.html` to run unit tests for the moment.
 
 Debug with `grunt serve`.
 
 Build with `grunt build`.
 
-Generate documentation with `yuidoc .`.
