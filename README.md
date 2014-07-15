@@ -22,4 +22,3 @@ Lint with `grunt jshint`.
 Debug with `grunt serve`.
 
 Build for production or deployment with `grunt build`.
-
