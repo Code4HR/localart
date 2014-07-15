@@ -17,6 +17,8 @@ Generate documentation with `yuidoc .`.
 
 Currently, `grunt test` fails all unit tests.  Open `test/index.html` to run unit tests for the moment.
 
+Lint with `grunt jshint`.
+
 Debug with `grunt serve`.
 
 Build with `grunt build`.
