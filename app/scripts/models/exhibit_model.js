@@ -1,6 +1,6 @@
 /*
-    An HTML5 mobile app for navigating & browsing locations of public art, 
-    architecture, and culture in Norfolk, VA. 
+    An HTML5 mobile app for navigating & browsing locations of public art,
+    architecture, and culture in Norfolk, VA.
     Copyright (C) 2014 Code for Hampton Roads contributors
 
     This program is free software: you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 /*global Ember
 */
 
-/** 
+/**
   * The exhibit model.
   *
   * @class Exhibit
@@ -29,7 +29,7 @@
   * @extends DS.Model
   */
 Norfolkart.Exhibit = DS.Model.extend({
-    /** 
+    /**
       * Represents the exhibit title.
       *
       * @property title
@@ -38,8 +38,8 @@ Norfolkart.Exhibit = DS.Model.extend({
       * @default DS.attr('string')
       */
     title: DS.attr('string'),
-    
-    /** 
+
+    /**
       * Represents the exhibit latitude.
       *
       * @property title
@@ -48,8 +48,8 @@ Norfolkart.Exhibit = DS.Model.extend({
       * @default DS.attr('number')
       */
     latitude: DS.attr('number'),
-    
-    /** 
+
+    /**
       * Represents the exhibit longitude.
       *
       * @property longitude
@@ -58,8 +58,8 @@ Norfolkart.Exhibit = DS.Model.extend({
       * @default DS.attr('number')
       */
     longitude: DS.attr('number'),
-    
-    /** 
+
+    /**
       * Represents the exhibit location.
       * A short brain-friendly description of where to find this exhibit.
       *
@@ -69,8 +69,8 @@ Norfolkart.Exhibit = DS.Model.extend({
       * @default DS.attr('string')
       */
     location: DS.attr('string'),
-    
-    /** 
+
+    /**
       * Represents the exhibit artists.
       *
       * @property artists
@@ -79,8 +79,8 @@ Norfolkart.Exhibit = DS.Model.extend({
       * @default DS.attr('string')
       */
     artists: DS.attr('string'),
-    
-    /** 
+
+    /**
       * Represents the exhibit URL on the City of Norfolk website.
       *
       * @property url
@@ -89,8 +89,8 @@ Norfolkart.Exhibit = DS.Model.extend({
       * @default DS.attr('string')
       */
     url: DS.attr('string'),
-    
-    /** 
+
+    /**
       * Represents the exhibit thumbnail image URL on the City of Norfolk
       * website.
       *
@@ -100,8 +100,8 @@ Norfolkart.Exhibit = DS.Model.extend({
       * @default DS.attr('string')
       */
     imageurl: DS.attr('string'),
-    
-    /** 
+
+    /**
       * Represents the exhibit full-size image URL on the City of Norfolk
       * website.
       *
@@ -110,7 +110,17 @@ Norfolkart.Exhibit = DS.Model.extend({
       * @type Attribute
       * @default DS.attr('string')
       */
-    fullimage: DS.attr('string')
+    fullimage: DS.attr('string'),
+    /**
+      * Represents the descriptions avaliable by the City of Norfolk
+      * website.
+      *
+      * @property description
+      * @readonly
+      * @type Attribute
+      * @default DS.attr('string')
+      */
+    description: DS.attr('string')
 });
 
 // probably should be mixed-in...
@@ -129,4 +139,3 @@ Norfolkart.Exhibit.reopen({
 });
 
 Norfolkart.Exhibit.FIXTURES = [];
-
