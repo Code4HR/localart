@@ -112,10 +112,10 @@ Norfolkart.Exhibit = DS.Model.extend({
       */
     fullimage: DS.attr('string'),
     /**
-      * Represents the exhibit full-size image URL on the City of Norfolk
+      * Represents the descriptions avaliable by the City of Norfolk
       * website.
       *
-      * @property fullimage
+      * @property description
       * @readonly
       * @type Attribute
       * @default DS.attr('string')
