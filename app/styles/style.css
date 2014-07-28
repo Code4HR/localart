@@ -1,6 +1,6 @@
 /*
-    An HTML5 mobile app for navigating & browsing locations of public art, 
-    architecture, and culture in Norfolk, VA. 
+    An HTML5 mobile app for navigating & browsing locations of public art,
+    architecture, and culture in Norfolk, VA.
     Copyright (C) 2014 Code for Hampton Roads contributors
 
     This program is free software: you can redistribute it and/or modify
@@ -16,21 +16,22 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 /* Put your CSS here */
 html, body {
-    margin: 30px 0;
+    margin: 5px 0px;
 }
 
 .record {
     width: 100%;
+    height: 100%;
 }
 
 .record * {
     float: left;
 }
 
-.thumbnail {
+/* .thumbnail {
     width: 80px;
     height: 80px;
 }
@@ -38,21 +39,44 @@ html, body {
 .arrow {
     float: right;
     vertical-align: middle;
-}
+} */
 
 .map {
     width: 100%;
-    height: 100%;
+    height: 90%;
     position: absolute; /* Thanks, Stan! */
 }
 
 .navbar {
     width: 100%;
     text-align: center;
+    position:absolute;
+    bottom: 0%;
+    height: 10%;   /* Height of the footer */
+    background:#6cf;
+}
+
+.navbar ul {
+    width: 100%;
+    background-color: blue;
+    padding: 0px;
+}
+
+.navbar li {
+    width: 25%;
+    height: 100%;
+    background-color: orange;
+    padding: 0px;
 }
 
 .navbar button {
-    float: left;
+    color: white;
+    background-color: orange;
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 2em;
 }
 
 #jslicense-labels1  {
