@@ -58,6 +58,7 @@ Norfolkart.MarkerLayer =
             'use strict';
             this.get('controller').transitionToRoute('exhibit',
                 this.get('content.id'));
+                console.log(this);
         }
     });
 
