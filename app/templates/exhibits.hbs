@@ -17,14 +17,18 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     -->
+<ul>
 {{#each model}}
   {{#link-to 'exhibit' this}}
-  <div class="pure-u-1-3"class="record">
-  	<button class="record">
+  <li class="record pure-u">
+    <div class="pure-u-1"class="record">
   	    <img {{bind-attr src="this.imageurl"}} class="thumbnail" />
-  	    <p>{{this.title}}</p>
+        <span>{{this.title}}</span>
+        <br>
+        <span>{{this.location}}</span>
           <img src="/images/arrow.png" class="arrow" />
-  	</button>
-  </div>
+  	</div>
+  </li>
   {{/link-to}}
 {{/each}}
+</ul>

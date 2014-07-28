@@ -18,23 +18,28 @@
  */
 
 /* Put your CSS here */
-html, body {
-    margin: 5px 0px;
+html {
+    margin: .5em .5em;
 }
 
 .record {
     width: 100%;
     height: 100%;
     float: left;
-    background-color: red;
+    font-size: 2em;
+    background-color: gray;
     top: 0;
-    bottom: 0;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
 }
 
-/* thumbnail {
-    width: 80px;
-    height: 80px;
-} */
+.record * {
+    float: left;
+    display: block;
+}
+thumbnail {
+    margin: .5em;
+}
 
 .arrow {
     float: right;
