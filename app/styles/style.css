@@ -97,11 +97,11 @@ html {
 
 /**Exhibit**/
 .exhibit {
+    font-size: 2em;
     text-align: center;
     padding: 3em;
 }
     .exhibit .description{
         text-align: left;
         padding: 1em 1em;
-        font-size: 2em;
     }
