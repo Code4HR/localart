@@ -17,33 +17,25 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     -->
+<div><!--Start of Container-->
+  <div id="title">
+      <p>{{this.title}}</p>
+  </div>
 
-<div id="title">
-    <p>{{this.title}}</p>
-</div>
+  <img {{bind-attr src="this.fullimage"}} />
 
-<img {{bind-attr src="this.fullimage"}} />
+  <div id="description">
+      <h4>Description</h4>
+      <p>{{this.description}}<p>
+  </div>
 
-<div id="description">
-    <h4>
-	  Description
-    </h4>
+  <div id="artists">
+      <h4>Artists</h4>
+      {{this.artists}}
+  </div>
 
-    {{this.description}}
-</div>
-
-<div id="artists">
-    <h4>
-	Artists
-    </h4>
-
-    {{this.artists}}
-</div>
-
-<div id="location">
-    <h4>
-	Location
-    </h4>
-
-    {{this.location}}
-</div>
+  <div id="location">
+      <h4>Location</h4>
+      {{this.location}}
+  </div>
+</div> <!--End of Container-->
