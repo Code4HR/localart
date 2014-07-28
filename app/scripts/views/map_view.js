@@ -46,28 +46,19 @@ Norfolkart.TileLayer = EmberLeaflet.TileLayer.extend({
   * @constructor
   */
 Norfolkart.MarkerLayer =
-    EmberLeaflet.MarkerLayer.extend(EmberLeaflet.PopupMixin, {
+    EmberLeaflet.MarkerLayer.extend({
         /**
-          * Accessor function, returns a popup view HTMLDivElement.
+          * Handler, handles the click event on the marker by transitioning to
+          * the exhibit view.
           *
-          * NOTE: Uses a very hacky implementation found by Lennart Hildebrandt
-          * found at https://github.com/gabesmed/ember-leaflet/issues/30.
-          *
-          * @method popupContent
-          * @return {HTMLDivElement} The popup view markup element.
+          * @method click
+          * @param {jQuery.Event} event The click event on the marker.
           */
-        popupContent: function () {
+        click: function (event) {
             'use strict';
-            console.log(this);
-            console.log(this.get('content'));
-            var view =
-                this._parentLayer.createChildView(Norfolkart.MapPopupView);
-            view.set('context', this.get('content'));
-            Ember.View.states.inDOM.enter(view);
-            view.createElement();
-            console.log(view.get('element'));
-            return view.get('element');
-        }.property()
+            this.get('controller').transitionToRoute('exhibit',
+                this.get('content.id'));
+        }
     });
 
 /**
