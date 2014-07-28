@@ -1,6 +1,6 @@
 <!--
-    An HTML5 mobile app for navigating & browsing locations of public art, 
-    architecture, and culture in Norfolk, VA. 
+    An HTML5 mobile app for navigating & browsing locations of public art,
+    architecture, and culture in Norfolk, VA.
     Copyright (C) 2014 Code for Hampton Roads contributors
 
     This program is free software: you can redistribute it and/or modify
@@ -17,6 +17,9 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     -->
+
+    {{outlet}}
+
 <div class="navbar">
     {{#link-to 'exhibits' }}
 	<button>
@@ -25,23 +28,9 @@
     {{/link-to}}
 
     {{#link-to 'map'}}
-	<button>
-	    Map
-	</button>
+	<button>Map</button>
+    {{/link-to}}iArtNorfolk{{#link-to 'about'}}
+  <button style="float: right">About</button>
     {{/link-to}}
-
-    iArtNorfolk
-
-    {{#link-to 'about'}}
-        <button style="float: right">
-            About
-        </button>
-    {{/link-to}}
-
-    <button {{action 'findMe'}} style="float: right">
-        Find Me
-    </button>
+  <button {{action 'findMe'}} style="float: right">Find Me</button>
 </div>
-
-{{outlet}}
-
