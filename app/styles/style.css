@@ -26,25 +26,29 @@ html {
     width: 100%;
     height: 100%;
     float: left;
-    font-size: 2em;
+    font-size: 1em;
     background-color: gray;
-    top: 0;
-    padding: 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: .5em solid #ddd;
 }
 
 .record * {
     float: left;
     display: block;
 }
+.record span{
+  padding: 3em;
+}
 .thumbnail {
     margin: .5em;
+    width: 20%;
+    height: 20%;
 }
 
 .arrow {
-    float: right;
-    vertical-align: middle;
-    color: blue;
+    padding-top: 1em;
+    margin: auto;
+    position: absolute;
+    background-color: yellow;
 }
 
 .map {
