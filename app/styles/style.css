@@ -25,21 +25,22 @@ html, body {
 .record {
     width: 100%;
     height: 100%;
-}
-
-.record * {
     float: left;
+    background-color: red;
+    top: 0;
+    bottom: 0;
 }
 
-/* .thumbnail {
+/* thumbnail {
     width: 80px;
     height: 80px;
-}
+} */
 
 .arrow {
     float: right;
     vertical-align: middle;
-} */
+    color: blue;
+}
 
 .map {
     width: 100%;
@@ -50,7 +51,7 @@ html, body {
 .navbar {
     width: 100%;
     text-align: center;
-    position:absolute;
+    position: fixed;
     bottom: 0%;
     height: 10%;   /* Height of the footer */
     background:#6cf;
