@@ -84,7 +84,13 @@ html {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 2em;
 }
-
+#about {
+    display: block;
+    margin: 1em 1em;
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+}
 #jslicense-labels1  {
     margin-left: auto;
     margin-right: auto;
