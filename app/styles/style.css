@@ -91,15 +91,20 @@ html {
     width: 100%;
     height: 100%;
 }
-#jslicense-labels1  {
-    margin-left: auto;
-    margin-right: auto;
-    border: outset 1px;
+#jslicense-table tr td *{
+    width: 33%;
 }
 
-#jslicense-labels1 td {
-    border: inset 1px;
+#jslicense-table tbody {
+    width: 100%;
+    height: 100%
+    margin: 3em;
+    padding: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /**Exhibit**/
 .exhibit {

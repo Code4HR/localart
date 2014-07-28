@@ -1,6 +1,6 @@
 /*
-    An HTML5 mobile app for navigating & browsing locations of public art, 
-    architecture, and culture in Norfolk, VA. 
+    An HTML5 mobile app for navigating & browsing locations of public art,
+    architecture, and culture in Norfolk, VA.
     Copyright (C) 2014 Code for Hampton Roads contributors
 
     This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/** 
+/**
   * The model for the tile layer.
   *
   * @namespace Norfolkart
@@ -26,7 +26,7 @@
   * @constructor
   */
 Norfolkart.TileLayer = EmberLeaflet.TileLayer.extend({
-    /** 
+    /**
       * Represents the url for map tiles.
       * Uses the Mapnik OpenStreetMap tile url.
       *
@@ -37,7 +37,7 @@ Norfolkart.TileLayer = EmberLeaflet.TileLayer.extend({
     tileUrl: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 });
 
-/** 
+/**
   * The model for the marker layer.
   *
   * @namespace Norfolkart
@@ -47,7 +47,7 @@ Norfolkart.TileLayer = EmberLeaflet.TileLayer.extend({
   */
 Norfolkart.MarkerLayer =
     EmberLeaflet.MarkerLayer.extend(EmberLeaflet.PopupMixin, {
-        /** 
+        /**
           * Accessor function, returns a popup view HTMLDivElement.
           *
           * NOTE: Uses a very hacky implementation found by Lennart Hildebrandt
@@ -58,16 +58,19 @@ Norfolkart.MarkerLayer =
           */
         popupContent: function () {
             'use strict';
+            console.log(this);
+            console.log(this.get('content'));
             var view =
                 this._parentLayer.createChildView(Norfolkart.MapPopupView);
             view.set('context', this.get('content'));
             Ember.View.states.inDOM.enter(view);
             view.createElement();
+            console.log(view.get('element'));
             return view.get('element');
         }.property()
     });
 
-/** 
+/**
   * The model for the marker collection layer.
   *
   * @namespace Norfolkart
@@ -76,7 +79,7 @@ Norfolkart.MarkerLayer =
   * @constructor
   */
 Norfolkart.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
-    /** 
+    /**
       * Represents the element to bind the content element to.
       *
       * @property contentBinding
@@ -84,8 +87,8 @@ Norfolkart.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
       * @default 'controller'
       */
     contentBinding: 'controller',
-    
-    /** 
+
+    /**
       * Represents the layer for extra items on the map.
       *
       * @property itemLayerClass
@@ -95,7 +98,7 @@ Norfolkart.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
     itemLayerClass: Norfolkart.MarkerLayer
 });
 
-/** 
+/**
   * The model for the map view.
   *
   * @namespace Norfolkart
@@ -104,8 +107,8 @@ Norfolkart.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend({
   * @constructor
   */
 Norfolkart.MapView = EmberLeaflet.MapView.extend({
-    /** 
-      * Represents the style classes to apply to this view. 
+    /**
+      * Represents the style classes to apply to this view.
       * Uses the map style class.
       *
       * @property classNames
@@ -114,7 +117,7 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       */
     classNames: ['map'],
 
-    /** 
+    /**
       * Represents the element to bind the map centre to.
       * Binds to the controller element centre.
       *
@@ -124,7 +127,7 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       */
     centerBinding: 'controller.centre',
 
-    /** 
+    /**
       * Represents the element to bind the map zoom to.
       *
       * @property zoomBinding
@@ -133,7 +136,7 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       */
     zoomBinding: 'controller.zoom',
 
-    /** 
+    /**
       * Represents the associated child layers for the map.
       * iArtNorfolk uses a tileset and a collection of markers to function.
       *
