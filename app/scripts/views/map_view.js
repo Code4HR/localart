@@ -32,9 +32,9 @@ Norfolkart.TileLayer = EmberLeaflet.TileLayer.extend({
       *
       * @property tileUrl
       * @type String
-      * @default 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+      * @default 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg'
       */
-    tileUrl: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    tileUrl: 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg'
 });
 
 /**
