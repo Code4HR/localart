@@ -56,7 +56,9 @@ We love pull requests.  Here's a quick guide:
 
 7. Lint your changes using `grunt jshint`.  If you paste your code into [jslint] (http://jslint.com/) as well, awesome, thanks! :smiley: We will not consider pull requests which do not follow the style rules for this project.  Also, please follow the syntax rules below.
 
-6. Push to your fork and submit a pull request.  Please provide us with some explanation of why you made the changes you made.  For new features make sure to explain a standard use case to us.
+8. Ensure all new source code files created have the standard license header present in all other source code files.
+
+9. Push to your fork and submit a pull request.  Please provide us with some explanation of why you made the changes you made.  For new features make sure to explain a standard use case to us.
 
 We try to respond quickly to tickets but sometimes we get a bit backlogged.  If you need a quicker response, try to find someone on IRC (#codeforva on Freenode) to give the ticket a review.
 
