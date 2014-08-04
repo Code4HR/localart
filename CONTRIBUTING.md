@@ -68,9 +68,9 @@ Syntax:
 * No trailing whitespace.  Blank lines should not have any space.
 * a = b and not a=b.
 * Any level of nesting gets an indent, especially in markup.
-* Follow the conventions you see used in the source already.
 * No line, regardless of comment or code, should exceed 80 characters.
 * Try to keep functions at 20 lines or less of code.
 * Ensure a single newline exists at the end of each file, no more, no less.
+* Follow the conventions you see used in the source already.
 
 And in case we didn't emphasize it enough: we love tests! (As of this writing, though, we still have yet to get a standard method of running them.  If they all pass when you open [`test/index.html`] (https://github.com/c4hrva/norfolkart/blob/master/test/index.html), then that will work for now.)
