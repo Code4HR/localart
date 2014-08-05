@@ -32,7 +32,7 @@
     display: block;
 }
 
-.record span{
+.record span {
     padding: 100px 0 0 20px;
 }
 
@@ -149,7 +149,7 @@ ul {
       border-bottom: .2em solid #ddd;
   }
 
-  .record span{
+  .record span {
       font-size: .25em;
       width: 50px;
       padding: 50px 0 0 5px;
