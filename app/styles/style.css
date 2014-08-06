@@ -1,6 +1,6 @@
 /*
-    An HTML5 mobile app for navigating & browsing locations of public art, 
-    architecture, and culture in Norfolk, VA. 
+    An HTML5 mobile app for navigating & browsing locations of public art,
+    architecture, and culture in Norfolk, VA.
     Copyright (C) 2014 Code for Hampton Roads contributors
 
     This program is free software: you can redistribute it and/or modify
@@ -16,51 +16,150 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 /* Put your CSS here */
-html, body {
-    margin: 30px 0;
-}
 
 .record {
     width: 100%;
+    height: 100%;
+    float: left;
+    font-size: 1em;
+    border-bottom: .5em solid #ddd;
 }
 
 .record * {
     float: left;
+    display: block;
+}
+
+.record span {
+    padding: 100px 0 0 20px;
 }
 
 .thumbnail {
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
 }
 
 .arrow {
-    float: right;
-    vertical-align: middle;
+    padding-top: 100px;
+    margin: auto;
+    position: absolute;
 }
 
 .map {
     width: 100%;
-    height: 100%;
+    height: 90%;
     position: absolute; /* Thanks, Stan! */
 }
 
 .navbar {
     width: 100%;
     text-align: center;
+    position: fixed;
+    bottom: 0%;
+    height: 10%;   /* Height of the footer */
+    background:#6cf;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 2em;
+}
+
+.navbar ul {
+    width: 100%;
+    background-color: blue;
+    padding: 0px;
+}
+
+.navbar li {
+    width: 25%;
+    height: 100%;
+    background: rgb(66, 184, 221); /* this is a light blue */
+    padding: 0px;
+    margin: 0px;
 }
 
 .navbar button {
-    float: left;
+    color: white;
+    background: rgb(66, 184, 221); /* this is a light blue */
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 2em;
+    padding: 0px;
+    margin: 0px;
 }
 
-#jslicense-labels1  {
+#about {
+    display: block;
+    margin: 1em 1em;
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+}
+
+#jslicense-table tr td * {
+    width: 33%;
+}
+
+#jslicense-table tbody {
+    width: 100%;
+    height: 100%
+    margin: 3em;
+    padding: 100%;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    border: outset 1px;
 }
 
-#jslicense-labels1 td {
-    border: inset 1px;
+.exhibit {
+    font-size: 1em;
+    text-align: center;
+}
+
+.exhibit .description {
+    padding-bottom: 4em;
+    font-size: 1em;
+    text-align: left;
+}
+
+@media screen and (max-width: 48em) {
+  /** Scale down the size**/
+  .navbar button {
+    font-size: 1em;
+  }
+
+  .thumbnail {
+      width: 100px;
+      height: 100px;
+      padding: 1em;
+  }
+
+  .record {
+      width: 50px;
+      white-space: nowrap;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      float: left;
+      border-bottom: .2em solid #ddd;
+  }
+
+  .record span {
+      font-size: .25em;
+      width: 50px;
+      padding: 50px 0 0 5px;
+  }
+
+  .arrow {
+      padding-top: 50px;
+      margin: auto;
+      align: right;
+      position: absolute;
+  }
+
 }

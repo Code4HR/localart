@@ -1,6 +1,6 @@
 <!--
-    An HTML5 mobile app for navigating & browsing locations of public art, 
-    architecture, and culture in Norfolk, VA. 
+    An HTML5 mobile app for navigating & browsing locations of public art,
+    architecture, and culture in Norfolk, VA.
     Copyright (C) 2014 Code for Hampton Roads contributors
 
     This program is free software: you can redistribute it and/or modify
@@ -17,13 +17,19 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     -->
+<ul>
 {{#each model}}
-    {{#link-to 'exhibit' this}}
-	<button class="record">
-	    <img {{bind-attr src="this.imageurl"}} class="thumbnail" />
-	    <p>{{this.title}}</p>
-        <img src="/images/arrow.png" class="arrow" />
-	</button>
-    {{/link-to}}
+  {{#link-to 'exhibit' this}}
+    <li class="record pure-u">
+        <div class="pure-u-4-5">
+      	    <img {{bind-attr src="this.fullimage"}} class="thumbnail pure-img" />
+            <span>{{this.title}}<br />{{this.location}}</span>
+        </div>
+        
+        <div class="pure-u-1-5">
+          <img src="/images/arrow.png" class="arrow" />
+        </div>
+    </li>
+  {{/link-to}}
 {{/each}}
-
+</ul>
