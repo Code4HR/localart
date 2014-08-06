@@ -3,13 +3,13 @@ norfolkart
 
 An HTML5 mobile app for navigating &amp; browsing locations of public art, architecture, and culture in Norfolk, VA.
 
-Prerequisites
-=============
+Prerequisite Tools
+==================
 
     npm install -g yo yuidocjs
     
-Installation
-============
+Dependency Installation
+=======================
 
     npm install && bower install && cd test && bower install && cd ..
     
