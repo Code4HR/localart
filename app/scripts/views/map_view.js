@@ -32,6 +32,26 @@ Norfolkart.TileLayer = EmberLeaflet.TileLayer.extend({
       *
       * @property tileUrl
       * @type String
+      * @default 'http://norfolkart-tiles.herokuapp.com/v2/iArt/{z}/{x}/{y}.png'
+      */
+    tileUrl: 'http://norfolkart-tiles.herokuapp.com/v2/iArt/{z}/{x}/{y}.png'
+});
+
+/**
+  * The model for the backup tile layer.
+  *
+  * @namespace Norfolkart
+  * @class TileLayer
+  * @extends EmberLeaflet.TileLayer
+  * @constructor
+  */
+Norfolkart.BackupTileLayer = EmberLeaflet.TileLayer.extend({
+    /**
+      * Represents the url for map tiles.
+      * Uses the Mapnik OpenStreetMap tile url.
+      *
+      * @property tileUrl
+      * @type String
       * @default 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg'
       */
     tileUrl: 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg'
@@ -134,9 +154,10 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       *
       * @property childLayers
       * @type Array
-      * @default [Norfolkart.TileLayer, Norfolkart.MarkerCollectionLayer]
+      * @default [Norfolkart.BackupTileLayer, Norfolkart.TileLayer, Norfolkart.MarkerCollectionLayer]
       */
     childLayers: [
+        Norfolkart.BackupTileLayer,
         Norfolkart.TileLayer,
         Norfolkart.MarkerCollectionLayer
     ]
