@@ -123,6 +123,7 @@ ul {
 }
 
 .exhibit .description {
+    margin: .5em;
     padding-bottom: 4em;
     font-size: 1em;
     text-align: left;
