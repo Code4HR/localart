@@ -148,6 +148,39 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       */
     zoomBinding: 'controller.zoom',
 
+    /** Represents options specific to the map view.
+      *
+      * @property options
+      * @type Object
+      * @default {minZoom: 13, maxZoom: 16}
+      */
+    options: {
+	minZoom: 13,
+	maxZoom: 16,
+	maxBounds: L.latLngBounds(
+	      L.latLng(36.75, -76.44)
+	    , L.latLng(36.98, -76.13)
+	)
+    },
+
+    /**
+      * Represents the minimum zoom level allowable.
+      *
+      * @property minZoom
+      * @type Number
+      * @default 13
+      */
+    minZoom: 13,
+
+    /**
+      * Represents the maximum zoom level allowable.
+      *
+      * @property maxZoom
+      * @type Number
+      * @default 16
+      */
+    maxZoom: 16,
+
     /**
       * Represents the associated child layers for the map.
       * iArtNorfolk uses a tileset and a collection of markers to function.
@@ -157,7 +190,6 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       * @default [Norfolkart.BackupTileLayer, Norfolkart.TileLayer, Norfolkart.MarkerCollectionLayer]
       */
     childLayers: [
-        Norfolkart.BackupTileLayer,
         Norfolkart.TileLayer,
         Norfolkart.MarkerCollectionLayer
     ]
