@@ -17,23 +17,18 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     -->
-<div class="pure-g">
-    <div>
-	{{#each model}}
-	  {{#link-to 'exhibit' this}}
-	    <div class="record pure-u">
-		<div class="pure-u-4-5">
-		    <img {{bind-attr src="this.fullimage"}} class="thumbnail pure-img img" />
-		    <span class="record-title">{{this.title}}
-		    <br />
-		    <span class="record-location">{{this.location}}</span>
-		</div>
+<div>
+    {{#each model}}
+      {{#link-to 'exhibit' this}}
+	<div class="pure-g record">
+	    <img {{bind-attr src="this.fullimage"}} class="pure-u-1-6 thumbnail pure-img" />
 
-		<div class="pure-u-1-5">
-		  <!-- <img src="/images/arrow.png" class="arrow" /> -->
-		</div>
-	    </div>
-	  {{/link-to}}
-	{{/each}}
-    </div>
+	    <span class="record-description pure-u-5-6">
+		{{this.title}}
+		<br />
+		{{this.location}}
+	    </span>
+	</div>
+      {{/link-to}}
+    {{/each}}
 </div>
