@@ -21,26 +21,26 @@
 
 .record {
     background: url(http://iartnorfolk.com/images/arrow.png) 100% 50% no-repeat;
+    display: block;
+    float: left;
     width: 100%;
     height: 100%;
-    float: left;
-    font-size: 1em;
     border-bottom: .5em solid #ddd;
 }
 
-.record-title, .record-location {
-    display: block;
-}
-
-.record-title {
-    padding-top: 100px;
+.record-description {
+    padding-top: 7%;
 }
 
 .thumbnail {
-    float: left;
     width: 200px;
     height: 200px;
     padding-right: 20px;
+}
+
+.thumbnail img {
+    width: 12.5em; 
+    height: 12.5em;
 }
 
 .arrow {

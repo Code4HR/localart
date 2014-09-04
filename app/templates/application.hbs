@@ -17,9 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     -->
-<!--<div class="pure-u">-->
-  {{outlet}}
-<!--</div>-->
+{{outlet}}
 <div>
   <div class="pure-menu pure-menu-open pure-menu-horizontal navbar">
     <ul>
@@ -36,8 +34,10 @@
         <button>About</button>
           {{/link-to}}
         </li><li>
-        <a><!--Keep style Consistent-->
-        <button {{action 'findMe'}}>Find Me</button>
+        <a>
+        <button {{action 'findMe'}}>
+	    Find Me
+	</button>
         </a>
       </li>
     </ul>
