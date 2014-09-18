@@ -22,12 +22,14 @@
       {{#link-to 'exhibit' this}}
 	<div class="pure-g record">
 	    <img {{bind-attr src="this.fullimage"}} class="pure-u-1-6 thumbnail pure-img" />
-
-	    <span class="record-description pure-u-5-6">
-		{{this.title}}
-		<br />
-		{{this.location}}
-	    </span>
+        
+	    <div class="record-description pure-u-5-6">
+	        <p>
+                {{this.title}}
+                <br />
+                {{this.location}}
+	        </p>
+	    </div>
 	</div>
       {{/link-to}}
     {{/each}}
