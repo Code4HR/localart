@@ -30,20 +30,23 @@
     "unused": false,
 
     "globals": {
-        "Norfolkart": true,
-        "jQuery": true,
-        "Ember": true,
-        "Handlebars": true,
         "alert": true,
+        "jQuery": true,
+        "Handlebars": true,
+        "Ember": true,
         "Em": true,
+        "DS": true,
         "L": true,
         "EmberLeaflet": true,
-        "chai": true,
-        "suite": true,
-        "setup": true,
+        "Norfolkart": true,
+        "moduleFor": true,
         "test": true,
+        "assert": true,
+        "notEqual": true,
+        "ok": true,
+        "equal": true,
+        "expect": true,
         "sinon": true,
-        "teardown": true,
-        "DS": true
+        "teardown": true
     }
 }

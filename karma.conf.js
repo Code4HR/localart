@@ -16,22 +16,22 @@ module.exports = function(config) {
 
     // plugins
     plugins: [
-	'karma-qunit',
+        'karma-qunit',
         'karma-junit-reporter',
         'karma-coverage',
-	'karma-ember-preprocessor',
-	'karma-phantomjs-launcher'
+        'karma-ember-preprocessor',
+        'karma-phantomjs-launcher'
     ],
 
     // preprocessor
     preprocessors: {
-	'app/templates/**/*.hbs': 'ember',
-	'app/scripts/**/*.js': 'coverage',
-	'test/spec/**/*.js': 'coverage'
+        'app/templates/**/*.hbs': 'ember',
+        'app/scripts/**/*.js': 'coverage',
+        'test/spec/**/*.js': 'coverage'
     },
 
     coverageReporter: {
-	type: 'text'
+        type: 'text'
     },
 
 
@@ -43,10 +43,26 @@ module.exports = function(config) {
       'app/bower_components/ember-data/ember-data.js',
       'app/bower_components/leaflet-dist/leaflet-src.js',
       'app/bower_components/ember-leaflet/dist/ember-leaflet.js',
+      'test/bower_components/ember-qunit/dist/globals/main.js',
+      'test/bower_components/sinon/lib/sinon.js',
+      'test/bower_components/sinon/lib/sinon/spy.js',
+      'test/bower_components/sinon/lib/sinon/stub.js',
+      'test/bower_components/sinon/lib/sinon/mock.js',
+      'test/bower_components/sinon/lib/sinon/call.js',
+      'test/bower_components/sinon/lib/sinon/behavior.js',
+      'test/bower_components/sinon/lib/sinon/assert.js',
+      
+      'test/app.js',
+      'app/scripts/models/**/*.js',
+      'app/scripts/controllers/**/*.js',
+      'app/scripts/views/**/*.js',
+      'app/scripts/routes/**/*.js',
       
       '.tmp/scripts/combined-scripts.js',
       '.tmp/scripts/compiled-templates.js',
-      'test/spec/*.js',
+
+      'test/spec/**/*.js',
+      'app/templates/**/*.hbs'
     ],
 
 
