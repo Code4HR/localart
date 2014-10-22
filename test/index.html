@@ -27,21 +27,15 @@
             Mocha Spec Runner
         </title>
 
-        <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+        <link rel="stylesheet" href="bower_components/qunit/qunit/qunit.css">
     </head>
 
     <body>
-        <div id="mocha">
+        <div id="qunit">
         </div>
 
-        <div id="mocha-fixture">
+        <div id="qunit-fixture">
         </div>
-
-        <script src="bower_components/mocha/mocha.js"></script>
-
-        <script type="text/javascript">
-            mocha.setup('tdd')
-        </script>
 
 
         <!-- build:js(app) scripts/components.js -->
@@ -52,19 +46,28 @@
         <!-- endbuild -->
 
         <!-- bower:js -->
-        <script src="bower_components/chai/chai.js"></script>
+        <script src="bower_components/qunit/qunit/qunit.js"></script>
         <script src="bower_components/ember/ember.js"></script>
         <script src="bower_components/ember-data/ember-data.js"></script>
         <script src="bower_components/leaflet/dist/leaflet-src.js"></script>
         <script src="bower_components/ember-leaflet/dist/ember-leaflet.js"></script>
-        <script src="bower_components/ember-mocha-adapter/adapter.js"></script>
+        <script src="bower_components/ember-qunit/dist/globals/main.js"></script>
+        <script src="bower_components/sinon/lib/sinon.js"></script>
+        <script src="bower_components/sinon/lib/sinon/spy.js"></script>
+        <script src="bower_components/sinon/lib/sinon/stub.js"></script>
+        <script src="bower_components/sinon/lib/sinon/mock.js"></script>
+        <script src="bower_components/sinon/lib/sinon/call.js"></script>
+        <script src="bower_components/sinon/lib/sinon/behavior.js"></script>
+        <script src="bower_components/sinon/lib/sinon/assert.js"></script>
         <!-- endbower -->
 
-        <script type="text/javascript" src="sinon-1.10.2.js">
-        </script>
-
         <!-- include source files here... -->
-        <script type="text/javascript" src="../app/scripts/app.js">
+        <script type="text/javascript">
+            var Norfolk = window.Norfolkart = Ember.Application.create();
+            Norfolkart.setupForTesting();
+            Norfolkart.injectTestHelpers();
+            emq.globalize();
+            setResolver(Ember.DefaultResolver.create({namespace: Norfolkart}));
         </script>
 
         <script type="text/javascript" src="../app/scripts/controllers/application_controller.js">
@@ -91,14 +94,11 @@
         <script type="text/javascript" src="../app/scripts/views/map_view.js">
         </script>
 
-        <!-- include spec files here... -->
-        <script type="text/javascript" src="spec/test.js">
+        <!-- include test files here... -->
+        <script type="text/javascript" src="controllers/application_controller_test.js">
         </script>
 
-        <script type="text/javascript">
-            Ember.$(function () {
-                mocha.run()
-            });
+        <script type="text/javascript" src="controllers/map_controller_test.js">
         </script>
     </body>
 </html>
