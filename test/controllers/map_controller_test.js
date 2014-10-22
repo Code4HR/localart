@@ -39,25 +39,6 @@
         notEqual(typeof controller._actions.findMe, 'undefined');
     });
 
-    // actions.findMe :: void
-    test('find me action uses find me function', function () {
-        var controller = this.subject(),
-            spy = sinon.spy(controller, 'findMe');
-        controller.send('findMe');
-        ok(spy.calledOnce);
-        controller.findMe.restore();
-    });
-
-    // findMe :: void
-    test('find me gets the current position', function () {
-        var controller = this.subject(),
-            spy = sinon.spy(navigator.geolocation,
-                'getCurrentPosition');
-        controller.send('findMe');
-        ok(spy.calledOnce);
-        navigator.geolocation.getCurrentPosition.restore();
-    });
-
     // positionError :: PositionError -> void
     test('position error shows a dialogue', function () {
         var controller = this.subject(),
