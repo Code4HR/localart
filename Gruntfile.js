@@ -312,6 +312,12 @@
                     'htmlmin'
                 ]
             },
+            karma: {
+                unit: {
+                    configFile: 'karma.conf.js',
+                    singleRun: true
+                }
+            },
             emberTemplates: {
                 options: {
                     templateName: function (sourceFile) {
@@ -346,6 +352,7 @@
             }
         });
 
+        grunt.loadNpmTasks('grunt-karma');
         grunt.loadNpmTasks('grunt-wiredep');
 
         grunt.registerTask('server', function (target) {
@@ -381,7 +388,7 @@
             'concurrent:test',
             'connect:test',
             'neuter:app',
-            'mocha'
+            'karma'
         ]);
 
         grunt.registerTask('build', [
