@@ -39,7 +39,7 @@ We love pull requests.  Here's a quick guide:
 
 1. Fork the repo.
 
-2. Run the tests.  We only take pull requests with passing tests, and knowing that you have a clean slate always works out better: `bower install && cd test && bower install && cd .. && grunt test`.  (As of this writing, tests only run in the browser, so run `cd test && bower install && cd ..` and open `test/index.html` from your local repo.)
+2. Run the tests.  We only take pull requests with passing tests, and knowing that you have a clean slate always works out better: `bower install && cd test && bower install && cd .. && grunt test`.
 
 3. Add a test for your change.  Only refactoring and documentation changes require no new tests.  If you've added functionality or fixed a bug, we need a test!
 
