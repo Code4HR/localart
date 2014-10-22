@@ -15,10 +15,12 @@ Dependency Installation
     
 Generate documentation with `yuidoc .`.
 
-Currently, `grunt test` fails all unit tests.  Open `test/index.html` to run unit tests for the moment.
+Run unit tests with `grunt test`.
 
 Lint with `grunt jshint`.
 
 Debug with `grunt serve`.
 
 Build for production or deployment with `grunt build`.
+
+Lint, test and package any build by simply running `grunt`.
