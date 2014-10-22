@@ -2,7 +2,7 @@ language: node_js
 node_js:
     - "0.10"
 before_install:
-    - npm install -g yo bower yuidocjs karma-cli
+    - npm install -g yo bower grunt-cli yuidocjs karma-cli
 before_script:
     - bower install && cd test && bower install && cd ..
 script: grunt
