@@ -33,7 +33,7 @@ Norfolkart.IndexRoute = Ember.Route.extend({
       */
     beforeModel: function () {
         'use strict';
-        this.transitionTo('map');
+        this.transitionTo('exhibits');
     }
 });
 
