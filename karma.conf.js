@@ -61,7 +61,7 @@ module.exports = function(config) {
       '.tmp/scripts/combined-scripts.js',
       '.tmp/scripts/compiled-templates.js',
 
-      'test/spec/**/*.js',
+      'test/controllers/**/*.js',
       'app/templates/**/*.hbs'
     ],
 
