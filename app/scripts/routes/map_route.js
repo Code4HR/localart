@@ -41,23 +41,25 @@ Norfolkart.MapRoute = Ember.Route.extend({
           * Map function, returns a value with just a location element 
           * representing the exhibit coordinates.
           *
+          * @method toCoordinated
           * @param {Norfolkart.Exhibit} exhibit The current exhibit.
           * @param {Number} i The current exhibit index.
           * @param {Ember.Array} The exhibit list.
           *
           * @return {Ember.Array} The exhibit coordinates list.
           */
-        controller.set('content', model.map(function (exhibit, i, list) {
-            return {
-                location: L.latLng(
-                    exhibit.get('latitude'),
-                    exhibit.get('longitude')
-                ),
-                id: exhibit.get('id'),
-                title: exhibit.get('title'),
-                imageurl: exhibit.get('imageurl')
-            };
-        }));
+        controller.set('content', model.map(
+            function toCoordinated(exhibit, i, list) {
+                return {
+                    location: L.latLng(
+                        exhibit.get('latitude'),
+                        exhibit.get('longitude')
+                    ),
+                    id: exhibit.get('id'),
+                    title: exhibit.get('title'),
+                    imageurl: exhibit.get('imageurl')
+                };
+            }));
     },
 
     /** 

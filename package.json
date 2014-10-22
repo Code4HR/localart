@@ -1,6 +1,10 @@
 {
   "name": "norfolkart",
   "version": "0.0.0",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Code4HR/norfolkart.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "connect-livereload": "~0.2.0",
