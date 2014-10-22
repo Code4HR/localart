@@ -67,29 +67,29 @@ Norfolkart.BackupTileLayer = EmberLeaflet.TileLayer.extend({
   */
 Norfolkart.MarkerLayer =
     EmberLeaflet.MarkerLayer.extend(EmberLeaflet.PopupMixin, {
-        /**
-          * Handler, handles the click event on the marker by transitioning to
-          * the exhibit view.
-          *
-          * NOTE: Uses a very hacky implementation found by Lennart Hildebrandt
-          * found at https://github.com/gabesmed/ember-leaflet/issues/30.
-          *
-          * @method click
-          * @param {jQuery.Event} event The click event on the marker.
-          */
-         popupContent: function () {
-            'use strict';
-            console.log(this);
-            console.log(this.get('content'));
-            var view =
-                this._parentLayer.createChildView(Norfolkart.MapPopupView);
-            view.set('context', this.get('content'));
-            Ember.View.states.inDOM.enter(view);
-            view.createElement();
-            console.log(view.get('element'));
-            return view.get('element');
-        }.property()
-    });
+    /**
+      * Handler, handles the click event on the marker by transitioning to
+      * the exhibit view.
+      *
+      * NOTE: Uses a very hacky implementation found by Lennart Hildebrandt
+      * found at https://github.com/gabesmed/ember-leaflet/issues/30.
+      *
+      * @method click
+      * @param {jQuery.Event} event The click event on the marker.
+      */
+    popupContent: function () {
+	    'use strict';
+	    console.log(this);
+	    console.log(this.get('content'));
+	    var view =
+		this._parentLayer.createChildView(Norfolkart.MapPopupView);
+	    view.set('context', this.get('content'));
+	    Ember.View.states.inDOM.enter(view);
+	    view.createElement();
+	    console.log(view.get('element'));
+	    return view.get('element');
+    }.property()
+});
 
 /**
   * The model for the marker collection layer.
@@ -164,12 +164,12 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       * @default {minZoom: 13, maxZoom: 16}
       */
     options: {
-	minZoom: 13,
-	maxZoom: 16,
-	maxBounds: L.latLngBounds(
-	      L.latLng(36.75, -76.44)
-	    , L.latLng(36.98, -76.13)
-	)
+	    minZoom: 13,
+	    maxZoom: 16,
+	    maxBounds: L.latLngBounds(
+		L.latLng(36.75, -76.44),
+		L.latLng(36.98, -76.13)
+	    )
     },
 
     /**
@@ -196,7 +196,7 @@ Norfolkart.MapView = EmberLeaflet.MapView.extend({
       *
       * @property childLayers
       * @type Array
-      * @default [Norfolkart.BackupTileLayer, Norfolkart.TileLayer, Norfolkart.MarkerCollectionLayer]
+      * @default [Norfolkart.TileLayer, Norfolkart.MarkerCollectionLayer]
       */
     childLayers: [
         Norfolkart.TileLayer,
