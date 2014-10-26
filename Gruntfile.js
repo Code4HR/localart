@@ -45,6 +45,7 @@
 
         grunt.initConfig({
             yeoman: yeomanConfig,
+            pkg: grunt.file.readJSON('package.json'),
             watch: {
                 emberTemplates: {
                     files: '<%= yeoman.app %>/templates/**/*.hbs',
@@ -155,6 +156,18 @@
             /*uglify: {
                 dist: {}
             },*/
+            yuidoc: {
+                compile: {
+                    name: '<=% pkg.name %>',
+                    description: '<=% pkg.description %>',
+                    version: '<=% pkg.version %>',
+                    url: '<=% pkg.homepage %>',
+                    options: {
+                        paths: 'app/scripts',
+                        outdir: 'out'
+                    }
+                }
+            },
             rev: {
                 dist: {
                     files: {
@@ -353,6 +366,7 @@
         });
 
         grunt.loadNpmTasks('grunt-karma');
+        grunt.loadNpmTasks('grunt-contrib-yuidoc');
         grunt.loadNpmTasks('grunt-wiredep');
 
         grunt.registerTask('server', function (target) {
@@ -408,6 +422,7 @@
         grunt.registerTask('default', [
             'jshint',
             'test',
+            'yuidoc',
             'build'
         ]);
     };
