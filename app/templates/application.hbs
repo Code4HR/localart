@@ -17,21 +17,20 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     -->
-{{outlet}}
 <div>
   <div class="pure-menu pure-menu-open pure-menu-horizontal navbar">
     <ul>
         <li>
           {{#link-to 'exhibits' }}
-          <button>List</button>
-          {{/link-to}}
-        </li><li>
-          {{#link-to 'map'}}
-          <button>Map</button>
+          <button>Home</button>
           {{/link-to}}
         </li><li>
           {{#link-to 'about'}}
-        <button>About</button>
+        <button>How Was This Built?</button>
+          {{/link-to}}
+        </li><li>
+          {{#link-to 'map'}}
+          <button>View The Map</button>
           {{/link-to}}
         </li><li>
         <a>
@@ -43,3 +42,4 @@
     </ul>
   </div>
 </div>
+{{outlet}}

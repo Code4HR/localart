@@ -36,12 +36,8 @@
 }
 
 .thumbnail {
-    height: 200px;
-}
-
-.thumbnail img {
-    width: 12.5em; 
-    height: 12.5em;
+    width: 100%;
+    overflow: hidden;
 }
 
 .arrow {
@@ -53,6 +49,8 @@
 .map {
     width: 100%;
     height: 90%;
+    bottom: 0px;
+    left: 0px;
     position: absolute; /* Thanks, Stan! */
 }
 
@@ -60,9 +58,9 @@
     width: 100%;
     text-align: center;
     position: fixed;
-    bottom: 0%;
+    top: 0%;
     height: 10%;   /* Height of the footer */
-    background:#6cf;
+    background: #6cf;
 }
 
 ul {
