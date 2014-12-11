@@ -79,7 +79,7 @@ ul {
 .navbar li {
     width: 25%;
     height: 100%;
-    background: rgb(66, 184, 221); /* this is a light blue */
+    background: #222; /* this is a light blue */
     padding: 0px;
     margin: 0px;
 }
@@ -90,7 +90,7 @@ ul {
 
 .navbar button {
     color: white;
-    background: rgb(66, 184, 221); /* this is a light blue */
+    background: #222; /* this is a light blue */
     border: none;
     width: 100%;
     height: 100%;
@@ -138,6 +138,10 @@ img {
     padding-bottom: 4em;
     font-size: 1em;
     text-align: left;
+}
+
+body {
+    background-color: #f0eae6;
 }
 
 @media screen and (max-width: 48em) {
