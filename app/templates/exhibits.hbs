@@ -20,8 +20,10 @@
 <div>
     {{#each model}}
       {{#link-to 'exhibit' this}}
-	<div class="pure-u-sm-1 pure-u-md-1-4">
-	    <img {{bind-attr src="this.fullimage"}} class="thumbnail pure-img" />
+	<div class="pure-u-sm-1 pure-u-md-1-8">
+            <div>
+                <img {{bind-attr src="this.imageurl"}} class="thumbnail pure-img" />
+            </div>
 	</div>
       {{/link-to}}
     {{/each}}

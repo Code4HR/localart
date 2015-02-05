@@ -32,7 +32,7 @@ Norfolkart.ApplicationAdapter = DS.RESTAdapter.extend({
       * @property host
       * @readonly
       * @type String
-      * @default 'http://norfolkart.herokuapp.com'
+      * @default 'http://localartapi-code4hr.rhcloud.com'
       */
-    host: 'http://norfolkart.herokuapp.com'
+    host: 'http://localartapi-code4hr.rhcloud.com'
 });
