@@ -36,7 +36,6 @@
 }
 
 .thumbnail {
-    width: 100%;
     overflow: hidden;
 }
 
@@ -56,7 +55,7 @@
 
 .navbar {
     width: 100%;
-    text-align: center;
+    text-align: right;
     position: fixed;
     top: 0%;
     height: 10%;   /* Height of the footer */
@@ -72,12 +71,11 @@ ul {
 
 .navbar ul {
     width: 100%;
-    background-color: blue;
+    background-color: #222;
     padding: 0px;
 }
 
 .navbar li {
-    width: 25%;
     height: 100%;
     background: #222; /* this is a light blue */
     padding: 0px;
@@ -95,7 +93,7 @@ ul {
     width: 100%;
     height: 100%;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    font-size: 2em;
+    font-size: 1em;
     padding: 0px;
     margin: 0px;
 }
