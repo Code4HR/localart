@@ -1,9 +1,9 @@
-norfolkart
+localart
 ==========
 
-[![Build Status](https://travis-ci.org/Code4HR/norfolkart.svg)](https://travis-ci.org/Code4HR/norfolkart)
+[![Build Status](https://travis-ci.org/Code4HR/localart.svg)](https://travis-ci.org/Code4HR/localart)
 
-An HTML5 mobile app for navigating &amp; browsing locations of public art, architecture, and culture in Norfolk, VA.
+An HTML5 mobile app for navigating &amp; browsing locations of public art, architecture, and culture in your local city.
 
 Prerequisite Tools
 ==================
