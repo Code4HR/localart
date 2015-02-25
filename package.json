@@ -5,6 +5,10 @@
     "type": "git",
     "url": "https://github.com/Code4HR/norfolkart.git"
   },
+  "scripts": {
+    "start": "npm install && bower install && grunt serve",
+    "test": "npm install && bower install && cd test && bower install && cd .. && grunt test"
+  },
   "dependencies": {},
   "devDependencies": {
     "connect-livereload": "~0.2.0",
