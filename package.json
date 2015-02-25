@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "npm install && bower install && grunt serve",
-    "test": "npm install && bower install && cd test && bower install && cd .. && grunt test"
+    "test": "npm install && bower install && cd test && bower install && cd .. && grunt jshint test"
   },
   "dependencies": {},
   "devDependencies": {
