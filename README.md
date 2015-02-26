@@ -17,11 +17,11 @@ Dependency Installation
     
 Generate documentation with `yuidoc .`.
 
-Run unit tests with `grunt test`.
+Just run unit tests with `grunt test`.  `npm test` will also install dependencies.
 
 Lint with `grunt jshint`.
 
-Debug with `grunt serve`.
+Just debug with `grunt serve`.  `npm start` will also install dependencies.
 
 Build for production or deployment with `grunt build`.
 
