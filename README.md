@@ -8,7 +8,7 @@ An HTML5 mobile app for navigating &amp; browsing locations of public art, archi
 Prerequisite Tools
 ==================
 
-    npm install -g yo yuidocjs karma-cli
+    npm install -g yo bower grunt-cli yuidocjs karma-cli
     
 Dependency Installation
 =======================
