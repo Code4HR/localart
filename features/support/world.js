@@ -1,5 +1,5 @@
 /*
-   Local Art API - Supports iArtNorfolk apps.
+   An HTML5 mobile app for navigating & browsing locations of public art,
    Copyright (C) 2015 Code for Hampton Roads Volunteers (http://code4hr.org)
 
    This program is free software: you can redistribute it and/or modify
