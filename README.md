@@ -3,7 +3,7 @@ localart
 
 [![Build Status](https://travis-ci.org/Code4HR/localart.svg)](https://travis-ci.org/Code4HR/localart)
 
-An HTML5 mobile app for navigating &amp; browsing locations of public art, architecture, and culture in your local city.
+A demo of an HTML5 mobile app to show how a citizen could navigate and browse locations of public art, architecture, and culture in her or his local city.
 
 Prerequisite Tools
 ==================
