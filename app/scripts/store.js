@@ -34,5 +34,5 @@ Norfolkart.ApplicationAdapter = DS.RESTAdapter.extend({
       * @type String
       * @default 'http://localartapi-code4hr.rhcloud.com'
       */
-    host: 'http://localartapi-code4hr.rhcloud.com'
+    host: 'https://localartapi-code4hr.rhcloud.com'
 });
