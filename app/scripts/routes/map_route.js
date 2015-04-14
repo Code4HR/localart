@@ -37,6 +37,9 @@ Norfolkart.MapRoute = Ember.Route.extend({
     setupController: function (controller, model) {
         'use strict';
 
+        var icon = L.icon({
+            iconUrl: '/images/arrow.png'
+        });
         /** 
           * Map function, returns a value with just a location element 
           * representing the exhibit coordinates.
@@ -57,7 +60,8 @@ Norfolkart.MapRoute = Ember.Route.extend({
                     ),
                     id: exhibit.get('id'),
                     title: exhibit.get('title'),
-                    imageurl: exhibit.get('imageurl')
+                    imageurl: exhibit.get('imageurl'),
+                    icon: icon
                 };
             }));
     },

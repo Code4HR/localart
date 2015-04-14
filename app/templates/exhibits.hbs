@@ -19,12 +19,10 @@
     -->
 <div>
     {{#each model}}
-      {{#link-to 'exhibit' this}}
-	<div class="pure-u-sm-1 pure-u-md-1-8">
-            <div>
+        <div class="pure-u-sm-1 pure-u-md-1-8">
+            {{#link-to 'exhibit' this}}
                 <img {{bind-attr src="this.imageurl"}} class="thumbnail pure-img" />
-            </div>
-	</div>
-      {{/link-to}}
+            {{/link-to}}
+        </div>
     {{/each}}
 </div>
