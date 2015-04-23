@@ -18,7 +18,6 @@
  */
 
 /* Put your CSS here */
-
 .record {
     background: url(http://iartnorfolk.com/images/arrow.png) 100% 50% no-repeat;
     display: block;
@@ -45,7 +44,7 @@
     position: absolute;
 }
 
-.map {
+.map, .exhibits, .exhibit {
     width: 100%;
     height: 90%;
     bottom: 0px;
@@ -123,7 +122,6 @@ ul {
 .exhibit {
     font-size: 1em;
     text-align: center;
-
 }
 
 img {
